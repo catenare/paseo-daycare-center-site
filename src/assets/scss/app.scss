@@ -8,7 +8,7 @@
 
 @include foundation-global-styles;
 // @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 //
 @include foundation-xy-grid-classes;
 @include foundation-typography;
@@ -53,3 +53,10 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+@import 'components/building-blocks/fullscreen-image-slider';
+
+@import 'components/building-blocks/topbar-sticky-shrink';
+@import 'components/building-blocks/expand-column';
+@import 'components/building-blocks/marketing-site-footer';
+@import 'components/building-blocks/contact-us-section';
