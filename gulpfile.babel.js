@@ -29,7 +29,7 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy), styleGuide));
+  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, fonts, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -88,14 +88,14 @@ function sass() {
       browsers: COMPATIBILITY
     }))
     // Comment in the pipe below to run UnCSS in production
-    //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
+    // .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cleanCss({ compatibility: 'ie9' })))
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest(PATHS.dist + '/assets/css'))
     .pipe(browser.reload({ stream: true }));
 }
 
-//Copy fonts
+// Copy fonts
 function fonts() {
   return gulp.src(PATHS.fonts)
       .pipe(gulp.dest(PATHS.dist + '/assets/fonts'));
