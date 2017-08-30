@@ -2,18 +2,12 @@
     <button class="menu-icon" type="button" data-toggle="main-menu"></button>
     <div class="title-bar-title">Menu</div>
   </div>
-
-<div class="top-bar-container" data-sticky-container>
-  <div class="sticky sticky-topbar" data-sticky data-options="anchor: page; marginTop: 0; stickyOn: small;">
+<div class="top-bar-container">
+  <div class="sticky sticky-topbar">
     <div class="top-bar" id="main-menu" >
       <div class="top-bar-left">
         <ul class="menu" data-magellan>
-          <li><a href="#home">Paseo Daycare and Preschool</a></li>
-          <li><a href="#classes">Classes</a></li>
-          <li><a href="#registration-fees">Registration</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#contact-us">Contact Us</a></li>
+          {{>daycare-menu-include}}
         </ul>
       </div>
       <div class="top-bar-right">
