@@ -12,9 +12,9 @@
         </div>
         <ul class="orbit-container">
             {{#each slides}}
-            <li class="is-active orbit-slide">
+            <li class="is-active orbit-slide" id="orbit-slide-{{@index}}">
                 <figure class="orbit-figure">
-                    <img class="orbit-image" src="assets/img/{{img}}" alt="{{alt}}">
+                    <img class="orbit-image" src="assets/img/" alt="">
                     <figcaption class="orbit-caption">
                         <blockquote>{{caption}}</blockquote>
                     </figcaption>

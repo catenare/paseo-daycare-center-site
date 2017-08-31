@@ -36,6 +36,48 @@ nav {
 
 
 }
+.orbit-slide {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  #orbit-slide-0 {
+    background-image: url("/assets/img/carousel/paseo_daycare_orbit-1.jpg");
+  }
+
+  #orbit-slide-1 {
+    background-image: url("/assets/img/carousel/paseo_daycare_orbit-2.jpg");
+  }
+
+  #orbit-slide-2 {
+    background-image: url("/assets/img/carousel/paseo_daycare_orbit-3.jpg");
+  }
+
+  #orbit-slide-3 {
+    background-image: url("/assets/img/carousel/paseo_daycare_orbit-4.jpg");
+  }
+
+}
+
+#orbit-slide-0 {
+  background-image: url("/assets/img/carousel/paseo_daycare_orbit-1.jpg");
+}
+
+#orbit-slide-1 {
+  background-image: url("/assets/img/carousel/paseo_daycare_orbit-2.jpg");
+}
+
+#orbit-slide-2 {
+  background-image: url("/assets/img/carousel/paseo_daycare_orbit-3.jpg");
+}
+
+#orbit-slide-3 {
+  background-image: url("/assets/img/carousel/paseo_daycare_orbit-4.jpg");
+}
+
+//#orbit-slide-1 {
+//  background-image: url("/assets/img/carousel/paseo_daycare_orbit-1.jpg");
+//}
 
 nav .top-bar {
   background-color: rgba($black, 0.5);
@@ -70,3 +112,5 @@ nav .top-bar a {
 //  background-color: rgba(10, 10, 10, 0.5);
 //}
 $topbar-background: none;
+
+
