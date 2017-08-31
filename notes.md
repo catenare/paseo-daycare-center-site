@@ -9,6 +9,8 @@ School readiness curriculum is introduced during the pre-primary phase. The curr
 
 ## Things to add
 * Christian school
+* Schedule
+* Hours
 * Menu
 * School Calendar
   * Preschool follow school calendar - school readiness program
@@ -33,3 +35,53 @@ School readiness curriculum is introduced during the pre-primary phase. The curr
     * Graduation
       * Banquet
       * Ceremony
+
+Play
+
+“When you asked me what I did in school today and I say, 'I just played.' Please don’t misunderstand me. For you see, I am learning as I play. I am learning to enjoy and be successful in my work. Today I am a child and my work is play.”
+Anita Wadley, 1974.
+
+There are six Early Learning and Development Areas (ELDAs) which integrate the three themes and twelve principles. The ELDAs organise children’s development and learning opportunities to help adults to organise the activities with babies, toddlers and young children.
+They are:
+1. Well-being
+2. Identity and belonging
+3. Communication
+4. Exploring mathematics
+5. Creativity
+6. Knowledge and understanding of the world
+
+
+Every child is born with rights. The following are from “The State of the World’s Children 2001, UNICEF: Section 28”:
+1. Protection from physical danger
+2. Adequate nutrition and health care
+3. Appropriate immunisations
+4. An adult with whom to form an attachment
+5. An adult who can understand and respond to
+their signals
+6. Things to look at, touch, hear, smell, taste
+7. Opportunities to explore their world
+8. Appropriate language stimulation
+9. Support in acquiring new motor, language and
+thinking skills
+10. A chance to develop some independence
+11. Help in learning how to control their own behaviour
+12. Opportunities to begin to learn to care for themselves
+13. Daily opportunities to play with a variety of objects
+14. Opportunities to develop  ne motor skills.
+15. Encouragement of language through talking, being
+read to, singing
+16. Activities that will develop a sense of mastery
+17. Experimentation with pre-writing and
+pre-reading skills
+18. Hands-on exploration for learning through action
+19. opportunities for taking responsibility and
+making choices
+20. Encouragement to develop self-control, cooperation
+and persistence in completing projects
+21. Support for their sense of self worth
+22. opportunities for self-expression
+23. encouragement of creativity
+
+
+Well-being therefore includes the emotional, social as
+well as the physical aspects of children’s development. Well-being is very important because when children are healthy, physically active and well-nourished then they are motivated to learn.

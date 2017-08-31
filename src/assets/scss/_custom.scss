@@ -1,7 +1,43 @@
 @import 'font-awesome';
 
-//Customize to bar
-header {
-  background-color: rgba(10, 10, 10, 0.5);
+nav {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+  z-index: 20;
 }
+
+nav .top-bar {
+  background-color: rgba($black, 0.5);
+  border-radius: 10px;
+}
+nav .top-bar a {
+  color: #ffffff;
+}
+
+// Orbit
+//$orbit-bullet-background: $medium-gray;
+//$orbit-bullet-background-active: $dark-gray;
+//$orbit-bullet-diameter: 1.2rem;
+//$orbit-bullet-margin: 0.1rem;
+//$orbit-bullet-margin-top: 0.8rem;
+//$orbit-bullet-margin-bottom: 0.8rem;
+//$orbit-caption-background: rgba($black, 0.5);
+//$orbit-caption-padding: 1rem;
+//$orbit-control-background-hover: rgba($black, 0.5);
+//$orbit-control-padding: 1rem;
+//$orbit-control-zindex: 10;
+
+
+
+.orbit-image {
+  //border: 10px solid black;
+  border-radius: 12px;
+  z-index: 21;
+}
+//Customize to bar
+//header {
+//  background-color: rgba(10, 10, 10, 0.5);
+//}
 $topbar-background: none;
