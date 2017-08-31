@@ -6,4 +6,3 @@ dist
 *.swp
 .idea/
 package-lock.json
-
