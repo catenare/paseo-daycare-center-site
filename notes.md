@@ -1,4 +1,41 @@
 # Notes:
+
+
+## Task List
+* Menu
+    * Logo for school
+    * Increase font size for large page. Reduce for small screent
+    * Stick to the top
+* Carousel
+    * Limit height of carousel
+    * Different images for smaller screens
+* Finalize Sections
+    * About
+        * What the school is about
+        * Emphasis on providing a learning environment
+        * Emphasis on play
+    * Classes
+        * Overview
+            * Age groups
+            * Hours
+            * Holidays - closed for public holidays
+                * Preschool follow the school calendar
+        * Includes pict of kids/class & teacher.
+        * Highlights of the class (what I wish we did)
+            * Nursery
+            * Daycare
+            * Preschool
+                * Special events exclusive for Preschoolers
+                * School Preparation
+    * Contact Us
+        * Find out more about the school
+            * Email
+            * Contact Form
+        * Get registration and fee information
+    * Join the email list
+        
+      
+    
 ## text
 School readiness curriculum is introduced during the pre-primary phase. The curriculum covers foundations in maths, language and life skills in order to ensure the children are well prepared to integrate into a traditional school environment.
 
@@ -6,6 +43,8 @@ School readiness curriculum is introduced during the pre-primary phase. The curr
 * [Nature and Nurture Montesorri School](http://nurtureandnature.co.za)
 * [Milestones Daycare](http://www.milestonesdaycare.co.za)
 * [Gummi Gardens](http://www.gummigardens.co.za)
+
+
 
 ## Things to add
 * Christian school
@@ -85,3 +124,14 @@ and persistence in completing projects
 
 Well-being therefore includes the emotional, social as
 well as the physical aspects of children’s development. Well-being is very important because when children are healthy, physically active and well-nourished then they are motivated to learn.
+
+
+Who are we?
+We are a community based Christian day-care center and pre-school offering quality care for children aged 18 months to 6 years old, and an effective school readiness program for children entering school the following year.
+Why are we unique?
+Our program and educational strategy caters to fit each child’s needs.
+We offer multi-dimensional education processes that prepare and direct learners through various developmental phases.
+What is our aim?
+We believe each child is unique, and it is our aim to produce positive, well-balanced and confident learners.
+We aim to develop the child holistically and seek to empower each learner who finishes at our pre-school with critical thinking, and problem solving skills.
+We strive to start the process of developing leaders that develop into capable, motivated learners that will give them an edge when starting their formal schooling years. 

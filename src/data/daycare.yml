@@ -1,0 +1,21 @@
+logo: paseo_logo.png
+carousel:
+  -
+    img: carousel/paseo_daycare_orbit-1.jpg
+    caption: "Learning..."
+    alt: "Puzzles"
+  -
+    img: carousel/paseo_daycare_orbit-2.jpg
+    caption: "Field Trips..."
+    alt: "Going to the zoo"
+  -
+    img: carousel/paseo_daycare_orbit-3.jpg
+    caption: "Cooperative play"
+    alt: "Time for play"
+  -
+    img: carousel/paseo_daycare_orbit-4.jpg
+    caption: "Learning"
+    alt: "Show and tell"
+
+quote: "\"When you asked me what I did in school today and I say, 'I just played.' Please don’t misunderstand me. For you see, I am learning as I play. I am learning to enjoy and be successful in my work. Today I am a child and my work is play.\" -Anita Wadley, 1974."
+
