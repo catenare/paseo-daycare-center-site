@@ -9,6 +9,5 @@ import Foundation from 'foundation-sites';
 // the line below
 //import './lib/foundation-explicit-pieces';
 
-// import vegas from 'vegas';
 
 $(document).foundation();
