@@ -134,4 +134,22 @@ We offer multi-dimensional education processes that prepare and direct learners 
 What is our aim?
 We believe each child is unique, and it is our aim to produce positive, well-balanced and confident learners.
 We aim to develop the child holistically and seek to empower each learner who finishes at our pre-school with critical thinking, and problem solving skills.
-We strive to start the process of developing leaders that develop into capable, motivated learners that will give them an edge when starting their formal schooling years. 
+We strive to start the process of developing leaders that develop into capable, motivated learners that will give them an edge when starting their formal schooling years.
+
+Christian Preschool
+
+Early education is a perfect time to aid little ones in positively interacting with others. A key part of our daily instruction includes developing Godly character through the teaching of Biblical children’s stories. We begin our day with prayer and reading God’s word. Our students will understand the importance of being friendly and loving their teachers, classmates, family and friends. We are an extension of the home, supporting the Christian values parents are instilling in their children.
+
+Our Environment
+
+We take pride in providing a clean, safe and educational environment for young children and their families. Our new facility is state of the art, offering advanced technology including secured video streaming for parental viewing, biometric fingerprint scanners to sign children in and out, and magnetic door locks for secured access to our center. Our outside play area offers safe fun with age appropriate equipment and organized activities.
+
+Curriculum
+Using our Blended Learning Model, we utilize several curricular programs to engage children in developmentally appropriate learning opportunities encouraging them to be confident, life-long learners. Our learning model focuses on the whole child to meet the needs of each young Scholar.
+
+Our Mission
+To provide a Christian, preparatory preschool that promotes academic excellence and fosters an early awareness of God’s unconditional love. 
+
+Early Education
+Balanced with
+Christian Values
