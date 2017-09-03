@@ -1,0 +1,34 @@
+.main-hero {
+  &__image {
+    width: 100vw;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url("../img/carousel/paseo_daycare_orbit-3.jpg");
+  }
+
+  &__caption {
+    background:rgba(255,255,255,0.5);
+    position: absolute;
+    top:33%;
+    left:20%;
+    width: 50vw;
+    padding:1rem;
+    transform:translateY(-50%);
+
+  }
+
+  h1 {
+
+  }
+
+  p {
+
+  }
+
+  a {
+
+  }
+}

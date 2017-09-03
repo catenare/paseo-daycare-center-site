@@ -1,100 +1,21 @@
 @import 'font-awesome';
+
+//Colors
+$orange: #FF8811;
+$off-yellow: #FDDB54;
+$yellow: #FFFF66;
+$light-brown: #bb7755;
+
+
+
 $caption-font-size: 3em;
-nav {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  width: 100%;
-  z-index: 20;
-}
-
-.orbit {
-  //height: 80vh;
-}
-
-.orbit-container {
-
-  .orbit-image {
-    width: 100%;
-    height: 100vh;
-    visibility: hidden;
-    //height: 100%;
-    //height: 70vh;
-  }
-
-  .orbit-caption {
-    bottom: 50%;
-    transform: translateY(50%);
-    background: none;
-    text-align: center;
-    color: $white;
-    font-weight: bold;
-  }
-
-  .orbit-caption blockquote {
-    color: $white;
-  }
+$topbar-background: $white;
 
 
-}
-.orbit-slide {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-#orbit-slide-0 {
-  background-image: url("../img/carousel/paseo_daycare_orbit-1.jpg");
-}
-
-#orbit-slide-1 {
-  background-image: url("../img/carousel/paseo_daycare_orbit-2.jpg");
-}
-
-#orbit-slide-2 {
-  background-image: url("../img/carousel/paseo_daycare_orbit-3.jpg");
-}
-
-#orbit-slide-3 {
-  background-image: url("../img/carousel/paseo_daycare_orbit-4.jpg");
-}
-
-//#orbit-slide-1 {
-//  background-image: url("/assets/img/carousel/paseo_daycare_orbit-1.jpg");
-//}
-
-nav .top-bar {
-  background-color: rgba($black, 0.5);
-  border-radius: 10px;
-}
-nav .top-bar a {
-  color: #ffffff;
-}
-
-// Orbit
-//$orbit-bullet-background: $medium-gray;
-//$orbit-bullet-background-active: $dark-gray;
-//$orbit-bullet-diameter: 1.2rem;
-//$orbit-bullet-margin: 0.1rem;
-//$orbit-bullet-margin-top: 0.8rem;
-//$orbit-bullet-margin-bottom: 0.8rem;
-//$orbit-caption-background: rgba($black, 0.5);
-//$orbit-caption-padding: 1rem;
-//$orbit-control-background-hover: rgba($black, 0.5);
-//$orbit-control-padding: 1rem;
-//$orbit-control-zindex: 10;
+@import 'custom/hero';
+@import 'custom/nav';
 
 
 
-.orbit-image {
-  //border: 10px solid black;
-  border-radius: 12px;
-  z-index: 21;
-}
-//Customize to bar
-//header {
-//  background-color: rgba(10, 10, 10, 0.5);
-//}
-$topbar-background: none;
 
 
