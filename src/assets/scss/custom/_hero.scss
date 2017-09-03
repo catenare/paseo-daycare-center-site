@@ -1,6 +1,6 @@
 .main-hero {
   &__image {
-    width: 100vw;
+    width: 100%;
     height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -10,13 +10,15 @@
   }
 
   &__caption {
-    background:rgba(255,255,255,0.5);
+    background:rgba(253, 219, 84, 0.6);
     position: absolute;
-    top:33%;
-    left:20%;
-    width: 50vw;
+    top:45%;
+    left:10%;
+    width: 35%;
     padding:1rem;
     transform:translateY(-50%);
+    border-radius: 10px;
+    color: rgba(120, 108, 84, 1);
 
   }
 
