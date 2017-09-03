@@ -34,5 +34,4 @@ PATHS:
     - "node_modules/font-awesome/scss"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
-    - "src/assets/js/building-blocks/app-dashboard-layout.js"
     - "src/assets/js/app.js"
