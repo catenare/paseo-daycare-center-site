@@ -9,48 +9,93 @@
   </head>
   <body>
   <div class="grid-container fluid">
-    <header>
-    <nav>
-        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
-            <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-            <div class="title-bar-title">Menu</div>
-        </div>
-        <div class="grid-container">
-            <div class="top-bar stacked-for-large" data-magellan id="main-menu">
-                <div class="top-bar-left">
-                    <ul class="vertical large-horizontal menu">
-                        <li><a href="#home">Paseo Daycare and Preschool</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#contact-us">Contact</a></li>
-                    </ul>
-                </div>
+    <header class="main-header">
+        <nav class="grid-container top-nav">
+            <div class="top-bar">
                 <div class="top-bar-right">
-                    <ul class="vertical large-horizontal menu">
+                    <ul class="menu large-horizontal">
                         <li><a href="#">Paseo Baptist Church</a></li>
                         <li><a href="#">The Martins</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-    
+        </nav>
+        <nav class="grid-container fluid main-nav">
+            <div class="grid-container">
+                <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+                    <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+                    <div class="title-bar-title">Menu</div>
+                </div>
+                <div class="top-bar" id="main-menu">
+                    <div class="top-bar-left">
+                        <ul class="vertical large-horizontal menu">
+                            <li><a href="#home">Paseo Daycare and Preschool</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#contact-us">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="menu icons icon-left">
+                            <li><a href="telephone:#"><i class="fa fa-phone" aria-hidden="true"></i></i><span>11 947
+                            2087</span></a></li>
+                            <li><a
+                                    href="mailto:#"><i class="fa fa-envelope" aria-hidden="true"></i><span>school@paseo.org
+                            .za</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
+    <div class="grid-container">
+        <div class="marketing-site-features">
+          <h2 class="marketing-site-features-headline">Classes</h2>
+          <p class="marketing-site-features-subheadline subheader">Classes for different groups</p>
+          <div class="row">
+            <div class="small-12 medium-4 columns">
+              <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+              <h4 class="marketing-site-features-title">Nursery</h4>
+              <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="small-12 medium-4 columns">
+              <i class="fa fa-angellist" aria-hidden="true"></i>
+              <h4 class="marketing-site-features-title">Daycare</h4>
+              <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <div class="small-12 medium-4 columns">
+              <i class="fa fa-bullseye" aria-hidden="true"></i>
+              <h4 class="marketing-site-features-title">Preschool</h4>
+              <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div>
+            <!-- <div class="small-12 medium-3 columns">
+              <i class="fa fa-battery-full" aria-hidden="true"></i>
+              <h4 class="marketing-site-features-title">Lithium Ion</h4>
+              <p class="marketing-site-features-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            </div> -->
+          </div>
+        </div>
+    </div>
+    <div class="grid-container fluid" style="background-color: #ffff66">
+        <h1 style="color: #01021a">h1 - test</h1>
+        <h2 style="color: #bb7755">h2 - test</h2>
+        <h3 style="color: #d58c2e">h3 - test</h3>
     <ul class="grid-x">
-        <li class="cell" style="background-color: #d58c2e">#D58C2E</li>
-        <li class="cell" style="background-color: #fddb54">#FDDB54</li>
-        <li class="cell" style="background-color: #97928f">#97928F</li>
-        <li class="cell" style="background-color: #01021a">#01021A</li>
-        <li class="cell" style="background-color: #786c54">#786C54</li>
+        <li class="small-2 cell" style="background-color: #d58c2e">#D58C2E</li>
+        <li class="small-2 cell" style="background-color: #fddb54">#FDDB54</li>
+        <li class="small-2 cell" style="background-color: #97928f">#97928F</li>
+        <li class="small-2 cell" style="background-color: #01021a">#01021A</li>
+        <li class="small-2 cell" style="background-color: #786c54">#786C54</li>
     </ul>
     <ul class="grid-x">
-        <li class="cell" style="background-color: #bb7755">Light Brown - BB7755 187,119,85</li>
-        <li class="cell" style="background-color: #ffff66">Away (yellow) - FFFF66 25,255,102</li>
-        <li class="cell" style="background-color: #ff8811">Orange Addidas - FF8811 255,136,17</li>
-        <li class="cell" style="background-color: #005566">056 - 005566 0,85,102</li>
-        <li class="cell" style="background-color: #000022;">Caliber - 000022 0,0,34</li>
+        <li class="small-2 cell" style="background-color: #bb7755">Light Brown - BB7755 187,119,85</li>
+        <li class="small-2 cell" style="background-color: #ffff66">Away (yellow) - FFFF66 25,255,102</li>
+        <li class="small-2 cell" style="background-color: #ff8811">Orange Addidas - FF8811 255,136,17</li>
+        <li class="small-2 cell" style="background-color: #005566">056 - 005566 0,85,102</li>
+        <li class="small-2 cell" style="background-color: #000022;">Caliber - 000022 0,0,34</li>
     </ul>
+    </div>
     
     </main>
     <footer id="contact-us" data-magellan-target="contact-us" class="marketing-site-footer">

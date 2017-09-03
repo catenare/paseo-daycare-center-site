@@ -9,89 +9,110 @@
   </head>
   <body>
   <div class="grid-container fluid">
-    <header>
-    <nav>
-        <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
-            <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-            <div class="title-bar-title">Menu</div>
-        </div>
-        <div class="grid-container">
-            <div class="top-bar stacked-for-large" data-magellan id="main-menu">
-                <div class="top-bar-left">
-                    <ul class="vertical large-horizontal menu">
-                        <li><a href="#home">Paseo Daycare and Preschool</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#contact-us">Contact</a></li>
-                    </ul>
-                </div>
+    <header class="main-header">
+        <nav class="grid-container top-nav">
+            <div class="top-bar">
                 <div class="top-bar-right">
-                    <ul class="vertical large-horizontal menu">
+                    <ul class="menu large-horizontal">
                         <li><a href="#">Paseo Baptist Church</a></li>
                         <li><a href="#">The Martins</a></li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </nav>
-    
+        </nav>
+        <nav class="grid-container fluid main-nav">
+            <div class="grid-container">
+                <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+                    <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+                    <div class="title-bar-title">Menu</div>
+                </div>
+                <div class="top-bar" id="main-menu">
+                    <div class="top-bar-left">
+                        <ul class="vertical large-horizontal menu">
+                            <li><a href="#home">Paseo Daycare and Preschool</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#programs">Programs</a></li>
+                            <li><a href="#contact-us">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-bar-right">
+                        <ul class="menu icons icon-left">
+                            <li><a href="telephone:#"><i class="fa fa-phone" aria-hidden="true"></i></i><span>11 947
+                            2087</span></a></li>
+                            <li><a
+                                    href="mailto:#"><i class="fa fa-envelope" aria-hidden="true"></i><span>school@paseo.org
+                            .za</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
     <section id="home" data-magellan-target="home">
-        <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
-            <div class="orbit-wrapper">
-                <div class="orbit-controls">
-                    <button class="orbit-previous">
-                        <span class="show-for-sr">Previous Slide</span>
-                        <span class="nav fa fa-chevron-left fa-3x"></span>
-                    </button>
-                    <button class="orbit-next">
-                        <span class="show-for-sr">Next Slide</span>
-                        <span class="nav fa fa-chevron-right fa-3x"></span>
-                    </button>
-                </div>
-                <ul class="orbit-container">
-                    <li class="is-active orbit-slide" id="orbit-slide-0">
-                        <figure class="orbit-figure">
-                            <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-1.jpg" alt="Puzzles">
-                            <figcaption class="orbit-caption">
-                                <blockquote>Learning...</blockquote>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="is-active orbit-slide" id="orbit-slide-1">
-                        <figure class="orbit-figure">
-                            <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-2.jpg" alt="Going to the zoo">
-                            <figcaption class="orbit-caption">
-                                <blockquote>Field Trips...</blockquote>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="is-active orbit-slide" id="orbit-slide-2">
-                        <figure class="orbit-figure">
-                            <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-3.jpg" alt="Time for play">
-                            <figcaption class="orbit-caption">
-                                <blockquote>Cooperative play</blockquote>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="is-active orbit-slide" id="orbit-slide-3">
-                        <figure class="orbit-figure">
-                            <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-4.jpg" alt="Show and tell">
-                            <figcaption class="orbit-caption">
-                                <blockquote>Learning</blockquote>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
+        <!--<div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+        <div class="orbit-wrapper">
+            <div class="orbit-controls">
+                <button class="orbit-previous">
+                    <span class="show-for-sr">Previous Slide</span>
+                    <span class="nav fa fa-chevron-left fa-3x"></span>
+                </button>
+                <button class="orbit-next">
+                    <span class="show-for-sr">Next Slide</span>
+                    <span class="nav fa fa-chevron-right fa-3x"></span>
+                </button>
             </div>
-            <nav class="orbit-bullets">
-                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
-                        class="show-for-sr">Current Slide</span></button>
-                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-                <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-            </nav>
+            <ul class="orbit-container">
+                <li class="is-active orbit-slide" id="orbit-slide-0">
+                    <figure class="orbit-figure">
+                        <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-1.jpg" alt="Puzzles">
+                        <figcaption class="orbit-caption">
+                            <blockquote>Learning...</blockquote>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="is-active orbit-slide" id="orbit-slide-1">
+                    <figure class="orbit-figure">
+                        <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-2.jpg" alt="Going to the zoo">
+                        <figcaption class="orbit-caption">
+                            <blockquote>Field Trips...</blockquote>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="is-active orbit-slide" id="orbit-slide-2">
+                    <figure class="orbit-figure">
+                        <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-3.jpg" alt="Time for play">
+                        <figcaption class="orbit-caption">
+                            <blockquote>Cooperative play</blockquote>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="is-active orbit-slide" id="orbit-slide-3">
+                    <figure class="orbit-figure">
+                        <img class="orbit-image" src="assets/img/carousel/paseo_daycare_orbit-4.jpg" alt="Show and tell">
+                        <figcaption class="orbit-caption">
+                            <blockquote>Learning</blockquote>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <nav class="orbit-bullets">
+            <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
+                    class="show-for-sr">Current Slide</span></button>
+            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+            <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+            <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+        </nav>
+    </div>
+    -->
+        <div class="main-hero">
+            <div class="main-hero__image">
+                <div class="main-hero__caption">
+                    <h1>Paseo Daycare and Preschool</h1>
+                    <h2>Early education based on Christian Values.</h2>
+                </div>
+            </div>
         </div>
     </section>
     
