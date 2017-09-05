@@ -1,0 +1,53 @@
+/** Programs classes */
+#programs {
+  h1,
+  h2 {
+    color: $orange;
+  }
+
+  h1 {
+    border-bottom: 1px solid $orange;
+  }
+
+  h2,
+  p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+  .program-detail p {
+    font-size: 3rem;
+  }
+
+  article {
+    @extend .grid-x;
+    margin-bottom: 2rem;
+    border-bottom-style: solid;
+    border-bottom-color: $off-yellow;
+    border-bottom-width: 1px  ;
+
+    div {
+      @extend .cell;
+    }
+
+    div.program-gallery {
+        @extend .large-9;
+      }
+
+    div.program-detail {
+        padding: 2rem;
+        @extend .large-3;
+        transform: rotate(10deg);
+      }
+
+    div.daycare {
+      transform: rotate(-10deg);
+    }
+
+
+    }
+
+  .orbit-container li.orbit-slide {
+    height: 60vh;
+  }
+}

@@ -23,15 +23,5 @@ $topbar-background: $white;
 $header-font-family: 'Rubik Mono One', 'Assistant', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $header-font-weight: $global-weight-normal;
 
-#about blockquote {
-  font-family: 'Short Stack';
-  font-size: 1.25rem;
-  margin: 1rem;
-  border: 0;
-}
 
 
-@import 'custom/hero';
-@import 'custom/nav';
-@import 'custom/gallery';
-@import 'custom/about';
