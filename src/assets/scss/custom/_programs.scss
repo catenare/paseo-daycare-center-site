@@ -37,11 +37,13 @@
     div.program-detail {
         padding: 2rem;
         @extend .large-4;
-        transform: rotate(10deg);
+        @include rotate(10);
+        //transform: rotate(10deg);
       }
 
     div.daycare {
-      transform: rotate(-10deg);
+      @include rotate(-10);
+      //transform: rotate(-10deg);
     }
 
 
