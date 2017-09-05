@@ -1,0 +1,35 @@
+/* Contact Us Section */
+#contact-us {
+  .contact-us-section {
+    h1 {
+      color: $orange;
+    }
+    dt {
+      border-bottom: 1px solid $off-yellow;
+      width: 60%;
+      font-size: 1.25rem;
+      padding-top: 0.5rem;
+    }
+    dt::before {
+      @include fa-icon();
+      // Use icon variable from font-awesome/scss/variables.scss
+      content: $fa-var-check-square-o;
+      color: $light-brown;
+      padding-right: 0.25rem;
+    }
+
+    dt.registration::before {
+      content: $fa-var-check-square-o;
+    }
+
+    dt.hours::before {
+      content: $fa-var-clock-o;
+    }
+    dt.meals::before {
+      content: $fa-var-cutlery;
+    }
+    dt.transportation::before {
+      content: $fa-var-bus;
+    }
+  }
+}

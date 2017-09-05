@@ -31,12 +31,12 @@
     }
 
     div.program-gallery {
-        @extend .large-9;
+        @extend .large-8;
       }
 
     div.program-detail {
         padding: 2rem;
-        @extend .large-3;
+        @extend .large-4;
         transform: rotate(10deg);
       }
 
