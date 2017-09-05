@@ -10,7 +10,8 @@
   <body>
   <div class="grid-container fluid">
     <header class="main-header">
-        <nav class="grid-container top-nav">
+    
+        <nav class="grid-container top-nav affiliates">
             <div class="top-bar">
                 <div class="top-bar-right">
                     <ul class="menu large-horizontal">
@@ -20,16 +21,17 @@
                 </div>
             </div>
         </nav>
+    
         <nav class="grid-container fluid main-nav">
+            <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+                <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+                <div class="title-bar-title">Menu</div>
+            </div>
             <div class="grid-container">
-                <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
-                    <button class="menu-icon" type="button" data-toggle="main-menu"></button>
-                    <div class="title-bar-title">Menu</div>
-                </div>
                 <div class="top-bar" id="main-menu">
                     <div class="top-bar-left">
                         <ul class="vertical large-horizontal menu" data-magellan>
-                            <li><a href="#home">Paseo Daycare and Preschool</a></li>
+                            <li><a href="#home">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#programs">Programs</a></li>
                             <li><a href="#contact-us">Contact</a></li>
@@ -45,6 +47,7 @@
                 </div>
             </div>
         </nav>
+    
     </header>
     <main>
     <section id="home" data-magellan-target="home">
@@ -52,7 +55,7 @@
             <div class="main-hero__image">
                 <div class="main-hero__caption">
                     <h1>Paseo Daycare and Preschool</h1>
-                    <h2>Early education based on Christian Values.</h2>
+                    <p>Early education based on Christian Values.</p>
                 </div>
             </div>
         </div>
@@ -102,45 +105,151 @@
     <div class="grid-container">
         <h1>Our Program</h1>
         <div class="grid-x">
-            <div class="cell">
-                <div class="media-object">
-                    <div class="media-object-section">
-                        <picture>
-                            <img class="thumbnail" src="http://placeimg.com/600/300/people" alt="bacon">
-                        </picture>
+            <div class="cell small-12 large-8">
+            <div class="orbit" role="region" aria-label="Paseo Daycare pictures" data-orbit data-use-m-u-i="false">
+                <div class="orbit-wrapper">
+                    <div class="orbit-controls">
+                        <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                        <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                     </div>
-                    <div class="media-object-section">
-                        <h2>Preschool</h2>
-                        <h3>5 to 6 years</h3>
+                    <ul class="orbit-container">
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="assets/img/nursery/program_images-1.jpg" alt="pict 1">
+                                <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                            </figure>
+                        </li>
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="assets/img/nursery/program_images-2.jpg" alt="pict 2">
+                                <!--<figcaption class="orbit-caption">pict 2</figcaption>-->
+                            </figure>
+                        </li>
+                        <li class="orbit-slide">
+                            <figure class="orbit-figure">
+                                <img class="orbit-image" src="assets/img/nursery/program_images-3.jpg" alt="pict 3">
+                                <!--<figcaption class="orbit-caption">pict 3</figcaption>-->
+                            </figure>
+                        </li>
+                    </ul>
+                </div>
+                <nav class="orbit-bullets">
+                    <button data-slide="0"><span class="show-for-sr">pict 1</span></button>
+                    <button data-slide="1"><span class="show-for-sr">pict 2</span></button>
+                    <button data-slide="2"><span class="show-for-sr">pict 3</span></button>
+                </nav>
+            </div>
+            </div>
+            <div class="cell auto">
+                <h2>Nursery</h2>
+            </div>
+        </div>
+        <div class="grid-x">
+            <div class="cell auto">
+                <h2>Daycare</h2>
+            </div>
+            <div class="cell small-12 large-8">
+                <div class="orbit" role="region" aria-label="Paseo Daycare pictures" data-orbit data-use-m-u-i="false">
+                    <div class="orbit-wrapper">
+                        <div class="orbit-controls">
+                            <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                            <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+                        </div>
+                        <ul class="orbit-container">
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/daycare/program_images-1.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/daycare/program_images-2.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/daycare/program_images-3.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/daycare/program_images-4.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/daycare/program_images-5.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/daycare/program_images-6.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                        </ul>
                     </div>
+                    <nav class="orbit-bullets">
+                        <button data-slide="0"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="1"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="2"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="3"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="4"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="5"><span class="show-for-sr">pict 1</span></button>
+                    </nav>
                 </div>
             </div>
-            <div class="cell">
-                <div class="media-object">
-                    <div class="media-object-section">
-                        <h2>Daycare</h2>
-                        <h3>3 to 5 years</h3>
-                    </div>
-                    <div class="media-object-section">
-                        <picture>
-                            <img class="thumbnail" src="http://placeimg.com/600/300/people" alt="bacon">
-                        </picture>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="media-object">
-                        <div class="media-object-section">
-                            <picture>
-                                <img class="thumbnail" src="http://placeimg.com/600/300/people" alt="bacon">
-                            </picture>
+        </div>
+        <div class="grid-x">
+            <div class="cell small-12 large-8">
+                <div class="orbit" role="region" aria-label="Paseo Daycare pictures" data-orbit data-use-m-u-i="false">
+                    <div class="orbit-wrapper">
+                        <div class="orbit-controls">
+                            <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                            <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
                         </div>
-    
-                        <div class="media-object-section">
-                            <h2>Nursery</h2>
-                            <h3>18 months to 3 years</h3>
-                        </div>
+                        <ul class="orbit-container">
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/preschool/program_images-1.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/preschool/program_images-2.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/preschool/program_images-3.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                            <li class="orbit-slide">
+                                <figure class="orbit-figure">
+                                    <img class="orbit-image" src="assets/img/preschool/program_images-4.jpg" alt="pict 1">
+                                    <!--<figcaption class="orbit-caption">pict 1</figcaption>-->
+                                </figure>
+                            </li>
+                        </ul>
                     </div>
+                    <nav class="orbit-bullets">
+                        <button data-slide="0"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="1"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="2"><span class="show-for-sr">pict 1</span></button>
+                        <button data-slide="3"><span class="show-for-sr">pict 1</span></button>
+                    </nav>
                 </div>
+            </div>
+            <div class="cell auto">
+                <h2>Preschool</h2>
             </div>
         </div>
     </div>
@@ -192,6 +301,7 @@
             </div>
         </div>
     </section>
+    
     </main>
     
     
