@@ -1,45 +1,19 @@
 <div class="grid-container">
     <h1>Our Program</h1>
     <div class="grid-x">
-        <div class="cell">
-            <div class="media-object">
-                <div class="media-object-section">
-                    <picture>
-                        <img class="thumbnail" src="http://placeimg.com/600/300/people" alt="bacon">
-                    </picture>
-                </div>
-                <div class="media-object-section">
-                    <h2>Preschool</h2>
-                    <h3>5 to 6 years</h3>
-                </div>
-            </div>
+        <div class="cell small-4 large-8">
+        {{>daycare-gallery}}
         </div>
-        <div class="cell">
-            <div class="media-object">
-                <div class="media-object-section">
-                    <h2>Daycare</h2>
-                    <h3>3 to 5 years</h3>
-                </div>
-                <div class="media-object-section">
-                    <picture>
-                        <img class="thumbnail" src="http://placeimg.com/600/300/people" alt="bacon">
-                    </picture>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="media-object">
-                    <div class="media-object-section">
-                        <picture>
-                            <img class="thumbnail" src="http://placeimg.com/600/300/people" alt="bacon">
-                        </picture>
-                    </div>
-
-                    <div class="media-object-section">
-                        <h2>Nursery</h2>
-                        <h3>18 months to 3 years</h3>
-                    </div>
-                </div>
-            </div>
+        <div class="cell auto">
+            <h2>Nursery</h2>
+        </div>
+    </div>
+    <div class="grid-x">
+        <div class="cell auto">
+            <h2>Daycare</h2>
+        </div>
+        <div class="cell small-8">
+            {{>expand-column}}
         </div>
     </div>
 </div>
