@@ -15,9 +15,15 @@
 
 .main-header {
   background-color: $menu-background-color-black;
+
+  a:hover {
+    background-color: $grayish;
+  }
+
 }
 
   nav.affiliates {
+
     @extend .show-for-large;
     background-color: $menu-background-color-black;
 
@@ -30,6 +36,9 @@
       background-color: $menu-background-color-black;
       font-size: 0.75em;
       font-weight: bolder;
+    }
+    a {
+      color: $white;
     }
   }
 
@@ -46,5 +55,5 @@
 }
 
 .main-header a {
-  color: $light-brown;
+  color: smart-scale($light-brown, -40%);
 }

@@ -1,0 +1,16 @@
+/* Footer SCSS */
+footer.site-footer {
+
+  background-color: $orange;
+
+  h4.marketing-site-footer-name {
+    font-size: 1.75rem;
+  }
+  .marketing-site-footer-bottom{
+    background-color: $menu-background-color-black;
+  }
+
+  a:hover {
+    color: $grayish;
+  }
+}
