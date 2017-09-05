@@ -1,8 +1,8 @@
 <div class="grid-container">
     <h1>Our Program</h1>
     <div class="grid-x">
-        <div class="cell small-4 large-8">
-        {{>daycare-gallery}}
+        <div class="cell small-12 large-8">
+        {{>daycare-gallery images=daycare.nursery}}
         </div>
         <div class="cell auto">
             <h2>Nursery</h2>
@@ -12,8 +12,16 @@
         <div class="cell auto">
             <h2>Daycare</h2>
         </div>
-        <div class="cell small-8">
-            {{>expand-column}}
+        <div class="cell small-12 large-8">
+            {{>daycare-gallery images=daycare.daycare}}
+        </div>
+    </div>
+    <div class="grid-x">
+        <div class="cell small-12 large-8">
+            {{>daycare-gallery images=daycare.preschool}}
+        </div>
+        <div class="cell auto">
+            <h2>Preschool</h2>
         </div>
     </div>
 </div>

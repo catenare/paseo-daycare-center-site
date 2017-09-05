@@ -1,16 +1,50 @@
+/* Navigation SCSS */
 .main-nav, .main-nav .top-bar ul {
-  background-color: $off-yellow;
+  background-color: $orange;
 }
 
-.main-header .top-bar {
-  background-color: $off-yellow;
+.main-header {
+  background-color: $orange;
+  & .top-bar {
+    background-color: $orange;
+  }
+  & .title-bar {
+    background-color: $orange;
+  }
 }
+
+.main-header {
+  background-color: $menu-background-color-black;
+}
+
+  nav.affiliates {
+    @extend .show-for-large;
+    background-color: $menu-background-color-black;
+
+    & .top-bar {
+      background-color: $menu-background-color-black;
+      height: 2.5em;
+    }
+
+    & .menu {
+      background-color: $menu-background-color-black;
+      font-size: 0.75em;
+      font-weight: bolder;
+    }
+  }
+
 
 .main-nav .top-nav, .top-nav .top-bar {
   background-color: $white;
 }
+
+.main-header .menu {
+  & a {
+    font-size: 1.2em;
+    font-weight: bolder;
+  }
+}
+
 .main-header a {
   color: $light-brown;
 }
-
-

@@ -58,25 +58,25 @@ Touch.init($);
 
 Triggers.init($, Foundation);
 
-Foundation.plugin(Abide, 'Abide');
+// Foundation.plugin(Abide, 'Abide');
 
-Foundation.plugin(Accordion, 'Accordion');
+// Foundation.plugin(Accordion, 'Accordion');
 
-Foundation.plugin(AccordionMenu, 'AccordionMenu');
+// Foundation.plugin(AccordionMenu, 'AccordionMenu');
 
-Foundation.plugin(Drilldown, 'Drilldown');
+// Foundation.plugin(Drilldown, 'Drilldown');
 
 Foundation.plugin(Dropdown, 'Dropdown');
 
 Foundation.plugin(DropdownMenu, 'DropdownMenu');
 
-Foundation.plugin(Equalizer, 'Equalizer');
+// Foundation.plugin(Equalizer, 'Equalizer');
 
-Foundation.plugin(Interchange, 'Interchange');
+// Foundation.plugin(Interchange, 'Interchange');
 
 Foundation.plugin(Magellan, 'Magellan');
 
-Foundation.plugin(OffCanvas, 'OffCanvas');
+// Foundation.plugin(OffCanvas, 'OffCanvas');
 
 Foundation.plugin(Orbit, 'Orbit');
 
@@ -84,20 +84,20 @@ Foundation.plugin(ResponsiveMenu, 'ResponsiveMenu');
 
 Foundation.plugin(ResponsiveToggle, 'ResponsiveToggle');
 
-Foundation.plugin(Reveal, 'Reveal');
+// Foundation.plugin(Reveal, 'Reveal');
 
-Foundation.plugin(Slider, 'Slider');
+// Foundation.plugin(Slider, 'Slider');
 
 Foundation.plugin(SmoothScroll, 'SmoothScroll');
 
-Foundation.plugin(Sticky, 'Sticky');
+// Foundation.plugin(Sticky, 'Sticky');
 
-Foundation.plugin(Tabs, 'Tabs');
+// Foundation.plugin(Tabs, 'Tabs');
 
 Foundation.plugin(Toggler, 'Toggler');
 
-Foundation.plugin(Tooltip, 'Tooltip');
+// Foundation.plugin(Tooltip, 'Tooltip');
 
-Foundation.plugin(ResponsiveAccordionTabs, 'ResponsiveAccordionTabs');
+// Foundation.plugin(ResponsiveAccordionTabs, 'ResponsiveAccordionTabs');
 
 module.exports = Foundation;

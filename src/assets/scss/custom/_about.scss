@@ -1,0 +1,24 @@
+/** About Us */
+#about {
+  blockquote {
+    font-family: 'Short Stack';
+    font-size: 1.25rem;
+    margin: 1rem;
+    border: 0;
+  }
+
+  h1, h2 {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+
+  p {
+    font-size: 1.25rem;
+    padding: 1rem;
+    & span {
+      font-weight: bolder;
+      font-size: 2rem;
+      display: block;
+    }
+  }
+}

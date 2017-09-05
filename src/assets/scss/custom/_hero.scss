@@ -1,3 +1,4 @@
+/* custom hero settings */
 .main-hero {
   &__image {
     width: 100%;
@@ -10,27 +11,51 @@
   }
 
   &__caption {
-    background:rgba(253, 219, 84, 0.6);
+    background: $orange;
     position: absolute;
-    top:45%;
-    left:10%;
-    width: 35%;
-    padding:1rem;
-    transform:translateY(-50%);
+    top: 45%;
+    left: 10%;
+    width: 50%;
+    padding: 1rem;
+    transform: translateY(-50%);
     border-radius: 10px;
     color: rgba(120, 108, 84, 1);
-
+    text-align: center;
   }
 
-  h1 {
-
+  & h1, & p {
+    font-weight: bolder;
   }
 
-  p {
-
+  & h1 {
+    font-size: 1.5em;
   }
 
-  a {
+  @include breakpoint(large) {
+    & h1 {
+      font-weight: bolder;
+      font-size: 3em;
+    }
 
+    & p {
+      font-weight: bolder;
+      font-size: 2em;
+    }
   }
+
+  //@mixin breakpoint($medium) {
+  //  & h1 {
+  //    font-weight: bolder;
+  //    font-size: 3.25em;
+  //  }
+  //}
+
+  //@mixin breakpoint($medium) {
+  //  & p {
+  //    font-weight: bolder;
+  //    font-size: 2em;
+  //    margin: 0;
+  //    padding: 0;
+  //  }
+  //}
 }
