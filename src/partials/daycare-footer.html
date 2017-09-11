@@ -1,13 +1,14 @@
 <footer  class="site-footer marketing-site-footer">
   <div class="row medium-unstack">
 
-    <div class="medium-4 columns">
+    <div class="columns">
       <h4 class="marketing-site-footer-name">Paseo Daycare and Preschool</h4>
       <div class="responsive-embed">
         {{>googlemap}}
       </div>
     </div>
-    <div class="medium-4 columns">
+
+    <div class="columns">
        <h4 class="marketing-site-footer-title">Contact Info</h4>
       <div class="marketing-site-footer-block">
         <i class="fa fa-map-marker" aria-hidden="true"></i>
@@ -27,12 +28,19 @@
       </div>
     </div>
 
-    <div class="medium-4 columns">
+    <div class="columns">
       <h4 class="marketing-site-footer-title">Subscribe</h4>
       <!-- Begin MailChimp Signup Form -->
       <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
       <style type="text/css">
-        #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+        #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif;}
+        #mc_embed_signup input.email{
+          width: 25vw;
+        }
+        #mc_embed_signup .button{
+          margin-top: 0.25rem;
+          width: 15vw;
+        }
         /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
       </style>
