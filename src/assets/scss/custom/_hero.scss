@@ -15,11 +15,11 @@
     position: absolute;
     top: 45%;
     left: 10%;
-    width: 50%;
+    width: 60%;
     padding: 1rem;
     transform: translateY(-50%);
     border-radius: 10px;
-    color: smart-scale(rgba(120, 108, 84, 0.8), -30%);
+    color: smart-scale(rgba(120, 108, 84, 0.8), -50%);
     text-align: center;
   }
 
@@ -28,13 +28,17 @@
   }
 
   & h1 {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   @include breakpoint(large) {
     & h1 {
       font-weight: bolder;
       font-size: 3em;
+    }
+
+    &__caption {
+      width: 50%;
     }
 
     & p {

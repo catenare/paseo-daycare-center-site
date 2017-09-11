@@ -38,18 +38,22 @@
         padding: 2rem;
         @extend .large-4;
         @include rotate(10);
-        //transform: rotate(10deg);
       }
 
-    div.daycare {
+    &.daycare div.program-detail {
       @include rotate(-10);
-      //transform: rotate(-10deg);
+      @include flex-order(0);
     }
 
-
+    &.nursery div.program-detail,
+    &.preschool div.program-detail {
+      @include breakpoint(small down) {
+        order: -1;
+      }
     }
 
   .orbit-container li.orbit-slide {
     height: 60vh;
   }
+}
 }
