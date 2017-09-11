@@ -15,9 +15,7 @@
     padding: 0;
     margin: 0;
   }
-  .program-detail p {
-    font-size: 3rem;
-  }
+  
 
   article {
     @extend .grid-x;
@@ -25,6 +23,14 @@
     border-bottom-style: solid;
     border-bottom-color: $off-yellow;
     border-bottom-width: 1px  ;
+
+    .program-detail h2 {
+      font-size: 3rem;
+    }
+
+    .program-detail p {
+      font-size: 2rem;
+    }
 
     div {
       @extend .cell;
@@ -42,13 +48,23 @@
 
     &.daycare div.program-detail {
       @include rotate(-10);
-      @include flex-order(0);
     }
 
     &.nursery div.program-detail,
-    &.preschool div.program-detail {
-      @include breakpoint(small down) {
+    &.preschool div.program-detail,
+    &.daycare div.program-detail {
+      @include breakpoint(large down) {
         order: -1;
+
+        @include rotate(0);
+        
+        p {
+          font-size: 1rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
       }
     }
 
