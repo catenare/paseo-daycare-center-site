@@ -22,7 +22,7 @@ PATHS:
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
-    - "!src/assets/{img,js,scss,fonts}/**/*"
+    - "!src/assets/{components,img,js,scss,fonts}/**/*"
   # Path to fonts
   fonts:
     - "src/assets/fonts/*"
@@ -34,5 +34,4 @@ PATHS:
     - "node_modules/font-awesome/scss"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
-    - "src/assets/components/Hello/hello.ts"
     - "src/assets/js/app.js"

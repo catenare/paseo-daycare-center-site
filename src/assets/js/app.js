@@ -17,10 +17,10 @@ $(document).ready(function () {
   })
 
   /* eslint-disable no-new */
-  // new Vue({
-  //   el: '#contact-us-form',
-  //   template: '<Hello/>',
-  //   components: { Hello }
-  // });
+  new Vue({
+     el: '#contact-us-form',
+     template: '<Hello/>',
+     components: { Hello }
+  })
 
 })

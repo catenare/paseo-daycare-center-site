@@ -193,4 +193,5 @@ function watch () {
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload))
   gulp.watch('src/assets/fonts/**/*').on('all', gulp.series(fonts, browser.reload))
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload))
+  gulp.watch('src/assets/components/**/*').on('all', gulp.series(javascript, browser.reload))
 }
