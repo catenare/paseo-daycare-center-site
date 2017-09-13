@@ -1,5 +1,6 @@
 import $ from 'jquery'
 import Vue from 'vue'
+import Hello from '../components/Hello'
 import whatInput from 'what-input'
 import './lib/foundation-explicit-pieces'
 
@@ -14,4 +15,12 @@ $(document).ready(function () {
       families: ['Assistant', 'Rubik Mono One', 'Short Stack']
     }
   })
+
+  /* eslint-disable no-new */
+  // new Vue({
+  //   el: '#contact-us-form',
+  //   template: '<Hello/>',
+  //   components: { Hello }
+  // });
+
 })
