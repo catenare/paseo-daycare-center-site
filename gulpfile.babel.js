@@ -131,7 +131,13 @@ let webpackConfig = {
               }
             },
               {
-                loader: 'sass-loader'
+                loader: 'sass-loader',
+                options:
+                  {
+                    includePaths: ['./src/assets/vue/styles'],
+                    data: '@import "./src/assets/vue/styles/app";',
+                    sourceMap: false
+                  }
               }
             ],
             ts: 'awesome-typescript-loader'
@@ -141,6 +147,22 @@ let webpackConfig = {
       {
         test: /\.ts$/,
         loader: 'awesome-typescript-loader'
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'fonts/[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        query: {
+          limit: 10000,
+          name: 'img/[name].[hash:7].[ext]'
+        }
       }
     ]
   }
@@ -193,5 +215,5 @@ function watch () {
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload))
   gulp.watch('src/assets/fonts/**/*').on('all', gulp.series(fonts, browser.reload))
   gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, browser.reload))
-  gulp.watch('src/assets/components/**/*').on('all', gulp.series(javascript, browser.reload))
+  gulp.watch('src/assets/vue/**/*').on('all', gulp.series(javascript, browser.reload))
 }

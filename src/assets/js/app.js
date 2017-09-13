@@ -1,7 +1,9 @@
 import $ from 'jquery'
 import Vue from 'vue'
-import Hello from '../components/Hello'
+import Hello from '../vue/components/Hello'
+import ContactForm from '../vue/components/ContactForm'
 import whatInput from 'what-input'
+
 import './lib/foundation-explicit-pieces'
 
 let WebFont = require('webfontloader')
@@ -18,9 +20,9 @@ $(document).ready(function () {
 
   /* eslint-disable no-new */
   new Vue({
-     el: '#contact-us-form',
-     template: '<Hello/>',
-     components: { Hello }
+    el: '#contact-us-form',
+    template: '<ContactForm/>',
+    components: { ContactForm}
   })
 
 })
