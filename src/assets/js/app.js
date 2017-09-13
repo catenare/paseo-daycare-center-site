@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import Vue from 'vue'
 import whatInput from 'what-input'
 import './lib/foundation-explicit-pieces'
 
