@@ -2,10 +2,24 @@ export default {
 
     data: function () {
         return {
-            counter: 0,
-            msg: "Goodbye Cruel World",
-            question: '',
-            answer: 'I cannot give you an answer until you ask a question!'
+            stories: [
+                {
+                    plot: "I crased my car today",
+                    writer: "Alex"
+                },
+                {
+                    plot: "Yesterday, someone stole my bag!",
+                    writer: "John"
+                },
+                {
+                    plot: "Someone ate my chocolate...",
+                    writer: "John"
+                },
+                {
+                    plot: "I ate someone's chocolate",
+                    writer: "Alex"
+                }
+            ]
         }
     },
     computed: {

@@ -1,13 +1,10 @@
 <div class="contact-form">
-        <p class="isActive">Original message: "{{ msg }}"</p>
-        <p>Computed reversed message: "{{ reversedMessage }}"</p>
-        <p>Now is: {{ now() }}</p>
-
-        <div class="watch-example">
-                <p>
-                        Ask a yes/no question:
-                        <input v-model="question">
-                </p>
-                <p>{{ answer }}</p>
-        </div>
+    <ul class="no-bullet">
+        <li v-for="(story, index) in stories" >
+            {{ index }}. {{ story.writer }} said "{{ story.plot }}"
+        </li>
+    </ul>
+    <pre>
+        {{ $data }}
+    </pre>
 </div>
