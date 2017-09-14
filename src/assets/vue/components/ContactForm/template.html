@@ -1,9 +1,11 @@
 <div class="contact-form">
     <ul class="no-bullet">
-        <li v-for="(story, index) in stories" >
+        <li v-for="(story, index) in stories | orderBy 'upvotes'" >
             {{ index }}. {{ story.writer }} said "{{ story.plot }}"
+            and upvoted {{ story.upvotes }} times.
         </li>
     </ul>
+    <button @click="order = order * -1">Reverse Order</button>
     <pre>
         {{ $data }}
     </pre>
