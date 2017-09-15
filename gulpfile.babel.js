@@ -108,6 +108,7 @@ let webpackConfig = {
       'vue$': 'vue/dist/vue.esm.js'
     }
   },
+  externals: /^~.*/,
   module: {
     rules: [
       {

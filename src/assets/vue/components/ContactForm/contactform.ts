@@ -1,7 +1,10 @@
-export default {
+import Vue from 'vue'
+import Component from 'vue-class-component'
 
+export default {
     data: function () {
         return {
+            upvotes: 0,
             msg: 'test message again',
             order: -1,
             stories: [
@@ -37,14 +40,14 @@ export default {
     methods: {
         famous: (stories) => {
             return stories.filter(  (item) => {
-
-                console.log(item)
-
                 return item.upvotes > 20
             })
         },
         now: function () {
            return Date.now()
+        },
+        upvote: function () {
+            this.upvotes++
         }
     },
     filters: {

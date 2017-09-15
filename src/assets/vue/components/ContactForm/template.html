@@ -1,19 +1,5 @@
 <div class="contact-form">
-    <ul class="no-bullet">
-        <li v-for="(story, index) in orderBy(stories, 'upvotes', order)" >
-            {{ index }}. {{ story.writer }} said "{{ story.plot }}"
-            and upvoted {{ story.upvotes }} times.
-        </li>
-    </ul>
-    <button class="button" @click="order = order * -1">Reverse Order</button>
-
-    <ul class="no-bullet">
-        <li v-for=" story in orderBy(famous(stories), 'upvotes', order) " >
-            {{ story.writer | capitalize }} said "{{ story.plot }}"
-            and upvoted {{ story.upvotes }} times.
-        </li>
-    </ul>
-
+    <marvelproto></marvelproto>
     <pre>
         {{ $data }}
     </pre>
