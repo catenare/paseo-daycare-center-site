@@ -58,13 +58,12 @@ export default {
             const targetCoords = target.getBoundingClientRect();
 
             if (target.nodeName === "IMG") {
-                this.isActive = true;
                 for (let name in transOriginNames) {
                     modal.style[name] = (target.offsetLeft + (targetCoords.width / 2)) + "px "
                         + ((target.offsetTop + (targetCoords.height / 2)) - screen_scroll.scrollTop) + "px";
                 }
             }
-
+            this.isActive = true;
         },
     },
 };

@@ -114,7 +114,7 @@ button {
   left: 0;
   overflow: scroll;
   transform: scale(0) translateZ(0);
-  transition-duration: 320ms;
+  transition-duration: 640ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform, opacity, border-radius;
   width: var(--screen-width);
