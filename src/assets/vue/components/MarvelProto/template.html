@@ -1,9 +1,11 @@
+<div class="grid-container">
+
 <div class="marvel-device nexus5">
     <div class="top-bar"></div>
     <div class="sleep"></div>
     <div class="volume"></div>
     <div class="camera"></div>
-    <div class="screen">
+    <div class="screen"  v-bind:class="{active: isActive}">
         <div class="screen-scroll">
             <h3 class="title">{{greeting}}</h3>
             <div class="loader" v-bind:class="{hide: isLoaded}">
@@ -27,9 +29,18 @@
                 </li>
             </ul>
         </div>
-        <div class="modal">
-            <div class="avatar"></div>
-            <div class="profile"></div>
+        <div class="modal" @click.stop.prevent="hideModal">
+            <div class="avatar">
+                <img :src="avatar.img" :alt="avatar.name">
+            </div>
+            <div class="profile">
+                <h3 class="profile_name">{{avatar.name}}</h3>
+                <a href="#" class="profile__email">{{avatar.email}}</a>
+                <button>Follow</button>
+                <p class="profile__info">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.</p>
+           </div>
         </div>
     </div>
 </div>
+</div>
+

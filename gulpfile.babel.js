@@ -133,8 +133,7 @@ let webpackConfig = {
             },
               {
                 loader: 'sass-loader',
-                options:
-                  {
+                options: {
                     includePaths: ['./src/assets/vue/styles'],
                     data: '@import "./src/assets/vue/styles/app";',
                     sourceMap: false

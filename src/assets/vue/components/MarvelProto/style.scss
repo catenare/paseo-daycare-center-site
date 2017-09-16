@@ -5,20 +5,29 @@
 // ==========================================================
 
 $bg: #91999f;
-html,body {height: 100%;}body {display:flex;flex-direction:column;align-items:center;justify-content:center;width: 100%;background:$bg;}
 
+html,
+body { height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: $bg;
+}
 
 // ==========================================================
 // REQUIRED STYLES
 // ==========================================================
 
 :root {
-  --primary-color: #2C3942;
-  --secondary-color: #1192FF;
-  --tertiary-color: #997AC0;
+  --primary-color: #2c3942;
+  --secondary-color: #1192ff;
+  --tertiary-color: #997ac0;
   --button-bg: var(--tertiary-color);
   --material-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-
   --screen-height: 568px;
   --screen-width: 320px;
 }
@@ -89,6 +98,7 @@ button {
   img {
     border-radius: 80%;
     box-shadow: var(--material-shadow);
+
     &:hover {
       cursor: pointer;
     }
@@ -105,15 +115,16 @@ button {
   overflow: scroll;
   transform: scale(0) translateZ(0);
   transition-duration: 320ms;
-  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform, opacity, border-radius;
   width: var(--screen-width);
-  background: var(--primary-color);
+  background-color: var(--primary-color);
   opacity: 0;
 }
 
 .avatar {
   position: relative;
+
   &::after {
     content: '';
     display: block;
@@ -126,6 +137,7 @@ button {
     height: 100%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--primary-color) 98%);
   }
+
   img {
     display: inline-block;
     width: 100%;
@@ -146,7 +158,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
-  transition: 200ms transform 100ms cubic-bezier(.4, 0, .2, 1);
+  transition: 200ms transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(-100%);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -173,7 +185,6 @@ button {
   font-weight: 300;
 }
 
-
 // ==========================================================
 // LOADER
 // ==========================================================
@@ -185,7 +196,7 @@ $stagger: 0.1875s;
 $animation_config: (
         name: expand-out,
         duration: 600ms,
-        timing: cubic-bezier(.66,.14,.83,.67),
+        timing: cubic-bezier(0.66, 0.14, 0.83, 0.67),
         iteration: infinite,
         direction: alternate,
         fill-mode: both
@@ -224,7 +235,6 @@ $animation_config: (
   }
 }
 
-
 // ==========================================================
 // STATES
 // ==========================================================
@@ -232,7 +242,7 @@ $animation_config: (
 $user-count: 30;
 $duration: 200ms;
 $stagger_delay: 0.0125s;
-$easing: cubic-bezier(.66, .14, .83, .67);
+$easing: cubic-bezier(0.66, 0.14, 0.83, 0.67);
 
 .loader.hide {
   display: none;
