@@ -1,33 +1,15 @@
 <div class="contact-form">
 
-    <marvelproto></marvelproto>
+    <!-- <marvelproto></marvelproto> -->
 
-    <!--<ul class="no-bullet">-->
-        <!--<li v-for="(story, index) in orderBy(stories, 'upvotes', order)" >-->
-            <!--{{ index }}. {{ story.writer }} said "{{ story.plot }}"-->
-            <!--and upvoted {{ story.upvotes }} times.-->
-        <!--</li>-->
-    <!--</ul>-->
-    <!--<button class="button" @click="order = order * -1">Reverse Order</button>-->
-
-    <!--<ul class="no-bullet">-->
-        <!--<li v-for=" story in orderBy(famous(stories), 'upvotes', order) " >-->
-            <!--{{ story.writer | capitalize }} said "{{ story.plot }}"-->
-            <!--and upvoted {{ story.upvotes }} times.-->
-        <!--</li>-->
-    <!--</ul>-->
-
-    <!--<button class="button" @click="upvote">-->
-        <!--Upvote! {{upvotes}}-->
-    <!--</button>-->
-
-    <!--<div class="flex-container">-->
-        <!--<h1>Type 2 numbers and choose operation.</h1>-->
-        <!--<form class=""-->
-    <!--</div>-->
-
-    <!--<pre>-->
-        <!--{{ $data }}-->
-    <!--</pre>-->
+    <form class="contact-us-form">
+        <input type="text" placeholder="Full name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Telephone">
+        <textarea name="message" id="" rows="12" placeholder="Type your message here"></textarea>
+        <div class="contact-us-form-actions">
+            <input type="submit" class="button" value="Send it" disabled/>
+        </div>
+    </form>
 
 </div>
