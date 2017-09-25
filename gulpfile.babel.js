@@ -131,14 +131,15 @@ let webpackConfig = {
                 sourceMap: false
               }
             },
-              {
-                loader: 'sass-loader',
-                options: {
-                    includePaths: ['./src/assets/vue/styles'],
-                    data: '@import "./src/assets/vue/styles/app";',
-                    sourceMap: false
-                  }
+            {
+              loader: 'sass-loader',
+              exclude: /styles/,
+              options: {
+                includePaths: ['./src/assets/vue/styles'],
+                data: '@import "./src/assets/vue/styles/app";',
+                sourceMap: false
               }
+            }
             ],
             ts: 'awesome-typescript-loader'
           }

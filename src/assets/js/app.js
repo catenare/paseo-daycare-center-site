@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import Q from 'q'
 import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
 import ContactForm from '../vue/components/ContactForm'
@@ -21,8 +22,9 @@ $(document).ready(function () {
   Vue.use(Vue2Filters)
 
   /* eslint-disable no-new */
-  new Vue({
+  let site = new Vue({
     el: '#contact-us-form',
     render: (h) => h(ContactForm)
   })
 })
+
