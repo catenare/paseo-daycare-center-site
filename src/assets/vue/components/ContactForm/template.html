@@ -3,13 +3,13 @@
     <!-- <marvelproto></marvelproto> -->
 
     <form class="contact-us-form">
-        <input type="text" placeholder="Full name">
-        <input type="email" placeholder="Email">
-        <input type="text" placeholder="Telephone">
-        <textarea name="message" id="" rows="12" placeholder="Type your message here"></textarea>
+        <input v-model.trim="fullname" type="text" placeholder="Full name">
+        <input v-model.trim="email" type="email" placeholder="Email">
+        <input v-model.trim="telephone" type="text" placeholder="Telephone">
+        <textarea v-model.trim="message" name="message" id="" rows="12" placeholder="Type your message here"></textarea>
         <div class="contact-us-form-actions">
             <input type="submit" class="button" value="Send it" disabled/>
         </div>
     </form>
-
+    {{fullname}}<br>{{email}}<br>{{telephone}}<br>{{message}}
 </div>
