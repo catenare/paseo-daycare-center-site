@@ -1,5 +1,5 @@
 import $ from 'jquery'
-import Q from 'q'
+import getCaptcha from '../ts/captcha'
 import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
 import ContactForm from '../vue/components/ContactForm'
@@ -22,9 +22,10 @@ $(document).ready(function () {
   Vue.use(Vue2Filters)
 
   /* eslint-disable no-new */
-  let site = new Vue({
+  new Vue({
     el: '#contact-us-form',
-    render: (h) => h(ContactForm)
+    render: (h) => h(ContactForm, {
+      props: {captcha: getCaptcha}
+    })
   })
 })
-

@@ -6,7 +6,7 @@
         <textarea v-model.trim="message" name="message" id="" rows="12" placeholder="Type your message here"></textarea>
         <div class="contact-us-form-actions">
             <input @click="submitForm" type="submit" class="button" value="Send it" v-bind:disabled="isSubmitDisabled" />
-            <div class="g-recaptcha" :data-sitekey="rcaptSigKey"></div>
+            <div id="recaptcha"></div>
         </div>
         
     </form>

@@ -3,8 +3,15 @@ import Fingerprint2 from "fingerprintjs2";
 import Vue from "vue";
 import Component from "vue-class-component";
 
-@Component
+
+@Component({ props: {
+            captcha: {
+                type: Promise,
+            }
+        }
+    })
 export default class ContactForm extends Vue {
+    protected captcha: any;
     protected fingerprint: string = "";
     protected fingerprintComponents: object = {};
     protected fullname: string = "";
@@ -22,23 +29,19 @@ export default class ContactForm extends Vue {
             this.fingerprintComponents = components;
           });
 
-        if (typeof window !== "undefined") {
-            window.captchaInit = () => {
-                console.log(window.grecaptcha)
-            }
-          } else {
-            console.log('window not defined')
-          }
-/*
-if (typeof window !== 'undefined') {
-  window.vueRecaptchaApiLoaded = function () {
-    recaptcha.setRecaptcha(window.grecaptcha);
-  };
-}
-*/
+        this.captcha.then( (captcha) => captcha.render("recaptcha", {
+            callback: this.validate_captcha,
+            sitekey: this.rcaptSigKey,
+
+        }));
     }
 
+    protected validate_captcha(response) {
+        console.log(response);
+        this.isSubmitDisabled = false;
+    };
+
     protected submitForm() {
-        console.log('form submitted');
+        console.log("form submitted");
     }
 }
