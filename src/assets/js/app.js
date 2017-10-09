@@ -2,6 +2,7 @@ import $ from 'jquery'
 import getCaptcha from '../ts/captcha'
 import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
+import VeeValidate from 'vee-validate'
 import ContactForm from '../vue/components/ContactForm'
 import whatInput from 'what-input'
 
@@ -20,6 +21,7 @@ $(document).ready(function () {
   })
 
   Vue.use(Vue2Filters)
+  Vue.use(VeeValidate)
 
   /* eslint-disable no-new */
   new Vue({

@@ -1,3 +1,13 @@
-.hide {
-  display: none;
+@import "~csspin/css/csspin-balls.css";
+
+.loader {
+  text-align: center;
+  padding-top: 40%;
+}
+
+.hide { display: none; }
+
+.captcha {
+  border-radius: 10px 40px;
+  margin-top: 10px;
 }

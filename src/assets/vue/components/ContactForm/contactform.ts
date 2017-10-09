@@ -1,17 +1,18 @@
 import axios from "axios";
 import Fingerprint2 from "fingerprintjs2";
+import Validator from 'vee-validate';
 import Vue from "vue";
 import Component from "vue-class-component";
-
 
 @Component({ props: {
             captcha: {
                 type: Promise,
-            }
-        }
+            },
+        },
     })
 export default class ContactForm extends Vue {
     protected captcha: any;
+    protected captchaResponse: string;
     protected fingerprint: string = "";
     protected fingerprintComponents: object = {};
     protected fullname: string = "";
@@ -37,11 +38,22 @@ export default class ContactForm extends Vue {
     }
 
     protected validate_captcha(response) {
-        console.log(response);
+        this.captchaResponse = response;
         this.isSubmitDisabled = false;
-    };
+    }
 
-    protected submitForm() {
-        console.log("form submitted");
+    protected validateBeforeSubmit() {
+        this.$validator.validateAll().then((result) => {
+            if (result) {
+                console.log("form validated");
+                // hide the form
+                // show the spinning bottles
+                // submit form data to wordpress
+                // validate data and return result
+                // return the result.
+                return;
+            }
+            console.log("errors in form");
+        });
     }
 }
