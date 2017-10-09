@@ -12,6 +12,11 @@ let WebFont = require('webfontloader')
 
 window.$ = $
 
+const siteUrl = 'http://paseo.demo/wp-json/paseo/v1/contact-us'
+const validateConfig = {
+  classes: true
+}
+
 $(document).ready(function () {
   $(document).foundation()
   WebFont.load({
@@ -21,13 +26,16 @@ $(document).ready(function () {
   })
 
   Vue.use(Vue2Filters)
-  Vue.use(VeeValidate)
+  Vue.use(VeeValidate, validateConfig)
 
   /* eslint-disable no-new */
   new Vue({
     el: '#contact-us-form',
     render: (h) => h(ContactForm, {
-      props: {captcha: getCaptcha}
+      props: {
+        captcha: getCaptcha,
+        url: siteUrl,
+      }
     })
   })
 })

@@ -4,15 +4,21 @@ import Validator from 'vee-validate';
 import Vue from "vue";
 import Component from "vue-class-component";
 
-@Component({ props: {
+@Component(
+    { props:
+        {
             captcha: {
                 type: Promise,
+            },
+            url: {
+                type: String,
             },
         },
     })
 export default class ContactForm extends Vue {
-    protected captcha: any;
-    protected captchaResponse: string;
+    protected url: string;
+    protected captcha: Promise<any>;
+    protected captchaResponse: string = "";
     protected fingerprint: string = "";
     protected fingerprintComponents: object = {};
     protected fullname: string = "";
@@ -23,6 +29,9 @@ export default class ContactForm extends Vue {
     protected rcaptSigKey: string =  "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
     // demo secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
     protected rcaptId: number = 0; // will be used later
+    protected hideLoader: boolean = true;
+    protected hideForm: boolean = false;
+    protected hideMessage: boolean = true;
 
     protected mounted() {
         new Fingerprint2().get( (result, components) => {
@@ -46,6 +55,13 @@ export default class ContactForm extends Vue {
         this.$validator.validateAll().then((result) => {
             if (result) {
                 console.log("form validated");
+                this.hideLoader = false;
+                this.hideForm = !this.hideLoader;
+                setTimeout(() => {
+                    console.log("hello timer");
+                    this.hideLoader = true;
+                    this.hideMessage = !this.hideLoader;
+                }, 1000)
                 // hide the form
                 // show the spinning bottles
                 // submit form data to wordpress
