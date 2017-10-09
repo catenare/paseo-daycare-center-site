@@ -1,22 +1,23 @@
 <div class="contact-form">
-    <form class="contact-us-form" v-bind:class="{hide: hideForm}" @submit.prevent="validateBeforeSubmit">
+    <form class="contact-us-form" :class="{hide: hideForm}" @submit.prevent="validateBeforeSubmit">
         <input v-model.trim="fullname" name="fullname" v-validate="'min:2|max:50|required'" type="text"
                placeholder="Full name" required>
         <span v-show="errors.has('fullname')">{{ errors.first('fullname') }}</span>
         <input v-model.trim="email" name="email" v-validate="'required|email'" type="email" placeholder="Email" required>
         <span v-show="errors.has('email')">{{ errors.first('email') }}</span>
         <input v-model.trim="telephone" type="tel" v-validate="'required'" placeholder="Telephone" required>
-        <textarea v-model.trim="message" name="message" id="" rows="5" placeholder="Type your message here"></textarea>
+        <textarea v-model.trim="message" name="message" id="" v-validate="'max:500'" rows="5"
+                  placeholder="Type your message here"></textarea>
         <div class="contact-us-form-actions">
             <div id="recaptcha"></div>
             <input type="submit" class="button captcha" value="Submit"
-                   v-bind:disabled="isSubmitDisabled" />
+                   :disabled="isSubmitDisabled" />
         </div>
     </form>
-    <div class="loader" v-bind:class="{hide: hideLoader}">
+    <div class="loader" :class="{hide: hideLoader}">
         <div class="cp-spinner cp-balls"></div>
     </div>
-    <div class="result-message" v-bind:class="{hide: hideMessage}">
+    <div class="result-message" :class="{hide: hideMessage}">
         <ul>
             <li>{{fullname}}</li>
             <li>{{email}}</li>

@@ -1,7 +1,7 @@
 @import "~csspin/css/csspin-balls.css";
 
 .loader {
-  text-align: center;
+  padding-left: 20%;
   padding-top: 40%;
 }
 
@@ -13,5 +13,9 @@
 }
 
 .invalid {
-  border-color: #ff0000;
+  border-color: #f00;
+}
+
+.untouched {
+  border-color: #fddb54;
 }
