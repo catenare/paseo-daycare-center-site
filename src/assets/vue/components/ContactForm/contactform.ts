@@ -36,6 +36,7 @@ export default class ContactForm extends Vue {
     protected hideLoader: boolean = true;
     protected hideForm: boolean = false;
     protected hideMessage: boolean = true;
+    protected resultMessage: object = null;
 
     protected mounted() {
         new Fingerprint2().get( (result, components) => {
@@ -43,7 +44,13 @@ export default class ContactForm extends Vue {
             this.fingerprintComponents = components;
           });
 
-        //get nonce from wordpress site
+        axios.get(this.url)
+             .then( (response) => {
+                 console.log(response);
+             })
+             .catch( (error) => {
+                 console.log(error);
+             });
 
         this.captcha.then( (captcha) => captcha.render("recaptcha", {
             callback: this.validate_captcha,
@@ -63,14 +70,35 @@ export default class ContactForm extends Vue {
                 console.log("form validated");
                 this.hideLoader = false;
                 this.hideForm = !this.hideLoader;
-                setTimeout(() => {
-                    console.log("hello timer");
-                    this.hideLoader = true;
-                    this.hideMessage = !this.hideLoader;
-                }, 1000);
+                axios.post(this.url, {
+                    captcha: this.captchaResponse,
+                    email: this.email,
+                    fingerprint: this.fingerprint,
+                    fullname: this.fullname,
+                    message: this.message,
+                    telephone: this.telephone,
+                           })
+                     .then( (response) => {
+                         this.hideLoader = true;
+                         this.hideMessage = !this.hideLoader;
+                         this.resultMessage = response.data;
+                         console.log(response);
+                })
+                    .catch( (response) => {
+                        this.hideLoader = true;
+                        this.hideMessage = !this.hideLoader;
+                        console.log(response);
+                    });
+
+                // setTimeout(() => {
+                //     console.log("hello timer");
+                //     this.hideLoader = true;
+                //     this.hideMessage = !this.hideLoader;
+                // }, 1000);
                 // submit form data to wordpress
                 // validate data and return result
                 // return the result.
+
                 return;
             }
             console.log("errors in form");
