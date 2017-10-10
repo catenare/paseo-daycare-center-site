@@ -43,6 +43,8 @@ export default class ContactForm extends Vue {
             this.fingerprintComponents = components;
           });
 
+        //get nonce from wordpress site
+
         this.captcha.then( (captcha) => captcha.render("recaptcha", {
             callback: this.validate_captcha,
             sitekey: this.rcaptSigKey,
@@ -65,9 +67,7 @@ export default class ContactForm extends Vue {
                     console.log("hello timer");
                     this.hideLoader = true;
                     this.hideMessage = !this.hideLoader;
-                }, 1000)
-                // hide the form
-                // show the spinning bottles
+                }, 1000);
                 // submit form data to wordpress
                 // validate data and return result
                 // return the result.

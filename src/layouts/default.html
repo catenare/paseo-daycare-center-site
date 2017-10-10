@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
   <body>
+  {{>daycare-cookielaw}}
   <div class="grid-container fluid">
-    {{>daycare-header}}
-    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    {{> body}}
-    {{>daycare-footer}}
+      {{>daycare-header}}
+      {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+      {{>body}}
+      {{>daycare-footer}}
   </div>
-
     <script src="{{root}}assets/js/app.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=initCaptcha&render=explicit' async defer></script>
   </body>

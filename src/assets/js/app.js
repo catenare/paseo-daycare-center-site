@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import CookieLaw from 'vue-cookie-law'
 import getCaptcha from '../ts/captcha'
 import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
@@ -35,6 +36,16 @@ $(document).ready(function () {
       props: {
         captcha: getCaptcha,
         url: siteUrl,
+      }
+    })
+  })
+  new Vue({
+    el: '#cookie-law',
+    render: (h) => h(CookieLaw, {
+      props: {
+        theme: 'royal',
+        position: 'top',
+        transitionName: 'slideFromTop',
       }
     })
   })
