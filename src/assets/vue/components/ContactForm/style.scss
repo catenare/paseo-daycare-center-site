@@ -1,21 +1,38 @@
 @import "~csspin/css/csspin-balls.css";
 
-.loader {
-  padding-left: 20%;
-  padding-top: 40%;
-}
+.contact-form {
+  .loader {
+    padding-left: 20%;
+    padding-top: 40%;
+  }
 
-.hide { display: none; }
+  .hide {
+    display: none;
+  }
 
-.captcha {
-  border-radius: 10px 40px;
-  margin-top: 10px;
-}
+  .captcha {
+    border-radius: 10px 40px;
+    margin-top: 10px;
+  }
 
-.invalid {
-  border-color: #f00;
-}
+  .invalid {
+    border-color: #f00;
+  }
 
-.untouched {
-  border-color: #fddb54;
+  .untouched {
+    border-color: #fddb54;
+  }
+
+  .contact-us-form-error {
+    @include form-input-error;
+    display: block;
+    margin-top: -8px;
+    margin-top: -0.5rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #cc4b37;
+  }
 }

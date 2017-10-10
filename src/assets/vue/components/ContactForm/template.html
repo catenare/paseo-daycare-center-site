@@ -1,13 +1,33 @@
 <div class="contact-form">
     <form class="contact-us-form" :class="{hide: hideForm}" @submit.prevent="validateBeforeSubmit">
-        <input v-model.trim="fullname" name="fullname" v-validate="'min:2|max:50|required'" type="text"
+            <input
+               v-model.trim="fullname" name="fullname"
+               v-validate="'min:2|max:50|required'"
+               :class="{'input': true, 'is-danger': errors.has('fullname') }"
+               type="text"
                placeholder="Full name" required>
-        <span v-show="errors.has('fullname')">{{ errors.first('fullname') }}</span>
-        <input v-model.trim="email" name="email" v-validate="'required|email'" type="email" placeholder="Email" required>
-        <span v-show="errors.has('email')">{{ errors.first('email') }}</span>
-        <input v-model.trim="telephone" type="tel" v-validate="'required'" placeholder="Telephone" required>
+        <span class="contact-us-form-error" v-show="errors.has('fullname')">{{ errors.first('fullname') }}</span>
+        <div class="input-group">
+            <span class="input-group-label"><i class="fa fa-envelope"></i></span>
+            <input class="input-group-field" v-model.trim="email" name="email" v-validate="'required|email'" type="email" placeholder="Email"
+                    required>
+        </div>
+        <span class="contact-us-form-error" v-show="errors.has('email')">{{ errors.first('email') }}</span>
+        <div class="input-group">
+            <span class="input-group-label"><i class="fa fa-phone"></i></span>
+        <input class="input-group-field"
+               v-model.trim="telephone"
+               v-mask="['(###) ###-###X']"
+               name="telephone"
+               type="tel"
+               v-validate="{ required: true}"
+               placeholder=" (083) 999-9999 "
+               required>
+        </div>
+            <span class="contact-us-form-error" v-show="errors.has('telephone')">{{ errors.first('telephone') }}</span>
         <textarea v-model.trim="message" name="message" id="" v-validate="'max:500'" rows="5"
                   placeholder="Type your message here"></textarea>
+            <span v-show="errors.has('message')">{{ errors.first('message') }}</span>
         <div class="contact-us-form-actions">
             <div id="recaptcha"></div>
             <input type="submit" class="button captcha" value="Submit"

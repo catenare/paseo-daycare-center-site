@@ -1,11 +1,15 @@
 import axios from "axios";
 import Fingerprint2 from "fingerprintjs2";
-import Validator from 'vee-validate';
+import Validator from "vee-validate";
 import Vue from "vue";
 import Component from "vue-class-component";
-
+import {mask} from "vue-the-mask";
+import {TheMask} from "vue-the-mask";
 @Component(
-    { props:
+    {
+        components: {TheMask},
+        directives: {mask},
+        props:
         {
             captcha: {
                 type: Promise,
@@ -18,7 +22,7 @@ import Component from "vue-class-component";
 export default class ContactForm extends Vue {
     protected url: string;
     protected captcha: Promise<any>;
-    protected captchaResponse: string = "";
+    protected captchaResponse: string = null;
     protected fingerprint: string = "";
     protected fingerprintComponents: object = {};
     protected fullname: string = "";
