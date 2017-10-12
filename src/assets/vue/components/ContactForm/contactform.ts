@@ -5,6 +5,7 @@ import Component from "vue-class-component";
 import {mask} from "vue-the-mask";
 import {TheMask} from "vue-the-mask";
 import getFinger from "../../../ts/fingerprint";
+
 @Component(
     {
         components: {TheMask},
@@ -150,6 +151,7 @@ export default class ContactForm extends Vue {
     /* show form after message is dismissed */
     protected showForm() {
         this.hideMessage = true;
+        this.isSubmitDisabled = true;
         this.fullname = null;
         this.email = null;
         this.telephone = null;

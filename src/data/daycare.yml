@@ -20,45 +20,45 @@ carousel:
 quote: "\"When you asked me what I did in school today and I say, 'I just played.' Please don’t misunderstand me. For you see, I am learning as I play. I am learning to enjoy and be successful in my work. Today I am a child and my work is play.\" -Anita Wadley, 1974."
 daycare:
   -
-    img: daycare/program_images-1.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/daycare/program_images-1.jpg
     caption: "pict 1"
   -
-    img: daycare/program_images-2.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/daycare/program_images-2.jpg
     caption: "pict 1"
   -
-    img: daycare/program_images-3.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/daycare/program_images-3.jpg
     caption: "pict 1"
   -
-    img: daycare/program_images-4.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/daycare/program_images-4.jpg
     caption: "pict 1"
   -
-    img: daycare/program_images-5.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/daycare/program_images-5.jpg
     caption: "pict 1"
   -
-    img: daycare/program_images-6.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/daycare/program_images-6.jpg
     caption: "pict 1"
 nursery:
   -
-    img: nursery/program_images-1.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/nursery/program_images-1.jpg
     caption: "pict 1"
   -
-    img: nursery/program_images-2.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/nursery/program_images-2.jpg
     caption: "pict 2"
   -
-    img: nursery/program_images-3.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/nursery/program_images-3.jpg
     caption: "pict 3"
 preschool:
   -
-    img: preschool/program_images-1.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/preschool/program_images-1.jpg
     caption: "pict 1"
   -
-    img: preschool/program_images-2.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/preschool/program_images-2.jpg
     caption: "pict 1"
   -
-    img: preschool/program_images-3.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/preschool/program_images-3.jpg
     caption: "pict 1"
   -
-    img: preschool/program_images-4.jpg
+    img: https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_440/daycare/preschool/program_images-4.jpg
     caption: "pict 1"
 
 

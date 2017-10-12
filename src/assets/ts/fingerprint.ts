@@ -1,10 +1,10 @@
-import Fingerprint2 from 'fingerprintjs2'
+import Fingerprint2 from "fingerprintjs2";
 
 const getFinger = new Promise((resolve) => {
 
   new Fingerprint2().get((result) => {
-    resolve(result)
-  })
-})
+    resolve(result);
+  });
+});
 
-export default getFinger
+export default getFinger;
