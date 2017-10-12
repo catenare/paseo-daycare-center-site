@@ -41,6 +41,7 @@ export default class ContactForm extends Vue {
     protected localCaptcha: any = null;
     protected widgetId: any = null;
 
+    /* Retrieve header information from server to setup local client*/
     protected getInitHeaders: any = (result) => {
         axios( {
                    headers: { "PAS-Fingerprint": result },
@@ -52,6 +53,7 @@ export default class ContactForm extends Vue {
             });
     }
 
+    /* Create captcha after captcha key retrieved from server */
     protected createCaptcha: any = (captchaKey) => {
         this.captcha.then( (captcha) => {
                                const widgetId = captcha.render("recaptcha", {
@@ -63,28 +65,20 @@ export default class ContactForm extends Vue {
                                this.setLocalCaptcha(captcha);
                            },
         );
-
     }
 
+    /* Set the data to send back to the server when submitting your data */
     protected setHeaders: any = (response) => {
         this.setFingerprint(response.headers["pas-fingerprint"]);
         this.setNonce(response.headers[ "pas-nonce" ]);
         this.setPascheck(response.headers[ "pas-check" ]);
-        // this.setCaptchaKey(response.headers["pas-captcha"]);
+
         this.createCaptcha(response.headers["pas-captcha"]);
     }
 
     protected mounted() {
+
         getFinger.then( (result) => this.getInitHeaders(result) );
-        // this.captcha.then( (captcha) => {
-        //     const widgetId = captcha.render("recaptcha", {
-        //         callback: this.validate_captcha,
-        //         sitekey: this.rcaptSigKey,
-        //     });
-        //     this.setWidgetId(widgetId);
-        //     this.setLocalCaptcha(captcha);
-        // },
-        // );
 
         // show final screen for final
         // this.resultMessage = false;
@@ -94,6 +88,7 @@ export default class ContactForm extends Vue {
         // this.hideLoader = false;
     }
 
+    /* local captcha so we can reset it */
     protected setLocalCaptcha( data ) {
         this.localCaptcha = data;
     }
@@ -102,6 +97,7 @@ export default class ContactForm extends Vue {
         this.widgetId = data;
     }
 
+    /* set information from headers */
     protected setFingerprint(data) {this.fingerprint = data; }
     protected setNonce(data) {this.nonce = data; }
     protected setPascheck(data) { this.pascheck = data; }
@@ -112,6 +108,7 @@ export default class ContactForm extends Vue {
         this.isSubmitDisabled = false;
     }
 
+    /* Submit data - validate first */
     protected validateBeforeSubmit() {
         this.$validator.validateAll().then((result) => {
             if (result) {
@@ -143,6 +140,7 @@ export default class ContactForm extends Vue {
                     .catch( (response) => {
                         this.hideLoader = true;
                         this.hideMessage = !this.hideLoader;
+                        this.resultMessage = false;
                     });
                 return;
             }
