@@ -30,20 +30,18 @@ export default class ContactForm extends Vue {
     protected telephone: string = null;
     protected message: string = null;
     protected isSubmitDisabled: boolean = true;
-    protected rcaptSigKey: string =  "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-    // demo secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+    protected rcaptSigKey: string =  null;
     protected rcaptId: number = 0; // will be used later
     protected hideLoader: boolean = true;
     protected hideForm: boolean = false;
     protected hideMessage: boolean = true;
-    protected resultMessage: object = null;
+    protected resultMessage: boolean = null;
     protected nonce: string = null;
     protected pascheck: string = null;
+    protected localCaptcha: any = null;
+    protected widgetId: any = null;
 
     protected getInitHeaders: any = (result) => {
-        console.log("init headers:", result);
-        this.fingerprint = result;
-
         axios( {
                    headers: { "PAS-Fingerprint": result },
                    method: "get",
@@ -51,28 +49,63 @@ export default class ContactForm extends Vue {
                } )
             .then( (response) => {
                 this.setHeaders(response);
-            } )
-            .catch( (error) => {
-                console.log("error:", error)
-            } );
+            });
+    }
+
+    protected createCaptcha: any = (captchaKey) => {
+        this.captcha.then( (captcha) => {
+                               const widgetId = captcha.render("recaptcha", {
+                                   callback: this.validate_captcha,
+                                   sitekey: captchaKey,
+                               });
+                               this.setCaptchaKey(captchaKey);
+                               this.setWidgetId(widgetId);
+                               this.setLocalCaptcha(captcha);
+                           },
+        );
+
     }
 
     protected setHeaders: any = (response) => {
-        this.$nextTick( () => {
-            this.fingerprint = response.headers["pas-fingerprint"];
-            this.nonce = response.headers[ "pas-nonce" ];
-            this.pascheck = response.headers[ "pas-check" ];
-        });
-        console.log('fingerprint:', this.fingerprint, 'nonce:', this.nonce, 'pascheck:', this.pascheck);
+        this.setFingerprint(response.headers["pas-fingerprint"]);
+        this.setNonce(response.headers[ "pas-nonce" ]);
+        this.setPascheck(response.headers[ "pas-check" ]);
+        // this.setCaptchaKey(response.headers["pas-captcha"]);
+        this.createCaptcha(response.headers["pas-captcha"]);
     }
 
     protected mounted() {
         getFinger.then( (result) => this.getInitHeaders(result) );
-        this.captcha.then( (captcha) => captcha.render("recaptcha", {
-            callback: this.validate_captcha,
-            sitekey: this.rcaptSigKey,
-        }));
+        // this.captcha.then( (captcha) => {
+        //     const widgetId = captcha.render("recaptcha", {
+        //         callback: this.validate_captcha,
+        //         sitekey: this.rcaptSigKey,
+        //     });
+        //     this.setWidgetId(widgetId);
+        //     this.setLocalCaptcha(captcha);
+        // },
+        // );
+
+        // show final screen for final
+        // this.resultMessage = false;
+        // this.hideForm = true;
+        // this.hideMessage = false;
+        // this.hideForm = true;
+        // this.hideLoader = false;
     }
+
+    protected setLocalCaptcha( data ) {
+        this.localCaptcha = data;
+    }
+
+    protected setWidgetId(data) {
+        this.widgetId = data;
+    }
+
+    protected setFingerprint(data) {this.fingerprint = data; }
+    protected setNonce(data) {this.nonce = data; }
+    protected setPascheck(data) { this.pascheck = data; }
+    protected setCaptchaKey(data) {this.rcaptSigKey = data; }
 
     protected validate_captcha(response) {
         this.captchaResponse = response;
@@ -113,7 +146,17 @@ export default class ContactForm extends Vue {
                     });
                 return;
             }
-            console.log("errors in form");
         });
+    }
+
+    /* show form after message is dismissed */
+    protected showForm() {
+        this.hideMessage = true;
+        this.fullname = null;
+        this.email = null;
+        this.telephone = null;
+        this.message = null;
+        this.localCaptcha.reset();
+        this.hideForm = false;
     }
 }

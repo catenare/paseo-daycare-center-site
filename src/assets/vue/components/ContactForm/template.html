@@ -38,15 +38,17 @@
         <div class="cp-spinner cp-balls"></div>
     </div>
     <div class="result-message" :class="{hide: hideMessage}">
-        <ul>
-            <li>{{resultMessage}}</li>
-        </ul>
-    </div>
-    <ul>
-        <li>{{rcaptSigKey}}</li>
-        <li>{{fingerprint}}</li>
-        <li>{{nonce}}</li>
-        <li>{{pascheck}}</li>
-    </ul>
+        <div v-if="resultMessage" class="alert-box callout success">
+            <p><i class="fa fa-check"></i>Your information is saved. Thank you!</p>
+        </div>
 
+        <div v-else class="alert-box callout warning">
+            <p><i class="fa fa-exclamation-triangle"></i>There was a problem saving your information. Please try again later.</p>
+        </div>
+        <div class="site-button">
+        <button @click="showForm" class="success button" aria-label="Dismiss alert" type="button">
+            Close
+        </button>
+        </div>
+    </div>
 </div>
