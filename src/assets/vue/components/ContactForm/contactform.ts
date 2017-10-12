@@ -1,10 +1,10 @@
 import axios from "axios";
-import Fingerprint2 from "fingerprintjs2";
 import Validator from "vee-validate";
 import Vue from "vue";
 import Component from "vue-class-component";
 import {mask} from "vue-the-mask";
 import {TheMask} from "vue-the-mask";
+import getFinger from "../../../ts/fingerprint";
 @Component(
     {
         components: {TheMask},
@@ -23,6 +23,7 @@ export default class ContactForm extends Vue {
     protected url: string;
     protected captcha: Promise<any>;
     protected captchaResponse: string = null;
+    protected finger: Promise<any>;
     protected fingerprint: string = null;
     protected fullname: string = null;
     protected email: string = null;
@@ -39,27 +40,34 @@ export default class ContactForm extends Vue {
     protected nonce: string = null;
     protected pascheck: string = null;
 
-    protected getInitialHeaders = (fingerprint) => {
+    protected getInitHeaders: any = (result) => {
+        console.log("init headers:", result);
+        this.fingerprint = result;
 
         axios( {
-                   headers: { "PAS-Fingerprint": fingerprint },
+                   headers: { "PAS-Fingerprint": result },
                    method: "get",
                    url: this.url,
                } )
             .then( (response) => {
-                this.nonce = response.headers[ "pas-nonce" ];
-                this.pascheck = response.headers[ "pas-check" ];
+                this.setHeaders(response);
             } )
             .catch( (error) => {
+                console.log("error:", error)
             } );
     }
 
-    protected mounted() {
-        new Fingerprint2().get( (result) => {
-            this.fingerprint = result;
-            this.getInitialHeaders(result);
+    protected setHeaders: any = (response) => {
+        this.$nextTick( () => {
+            this.fingerprint = response.headers["pas-fingerprint"];
+            this.nonce = response.headers[ "pas-nonce" ];
+            this.pascheck = response.headers[ "pas-check" ];
         });
+        console.log('fingerprint:', this.fingerprint, 'nonce:', this.nonce, 'pascheck:', this.pascheck);
+    }
 
+    protected mounted() {
+        getFinger.then( (result) => this.getInitHeaders(result) );
         this.captcha.then( (captcha) => captcha.render("recaptcha", {
             callback: this.validate_captcha,
             sitekey: this.rcaptSigKey,

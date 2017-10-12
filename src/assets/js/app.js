@@ -35,7 +35,7 @@ $(document).ready(function () {
     render: (h) => h(ContactForm, {
       props: {
         captcha: getCaptcha,
-        url: siteUrl,
+        url: siteUrl
       }
     })
   })
