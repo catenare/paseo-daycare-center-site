@@ -23,12 +23,11 @@ export default class ContactForm extends Vue {
     protected url: string;
     protected captcha: Promise<any>;
     protected captchaResponse: string = null;
-    protected fingerprint: string = "";
-    protected fingerprintComponents: object = {};
-    protected fullname: string = "";
-    protected email: string = "";
-    protected telephone: string = "";
-    protected message: string = "";
+    protected fingerprint: string = null;
+    protected fullname: string = null;
+    protected email: string = null;
+    protected telephone: string = null;
+    protected message: string = null;
     protected isSubmitDisabled: boolean = true;
     protected rcaptSigKey: string =  "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
     // demo secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
@@ -37,25 +36,33 @@ export default class ContactForm extends Vue {
     protected hideForm: boolean = false;
     protected hideMessage: boolean = true;
     protected resultMessage: object = null;
+    protected nonce: string = null;
+    protected pascheck: string = null;
+
+    protected getInitialHeaders = (fingerprint) => {
+
+        axios( {
+                   headers: { "PAS-Fingerprint": fingerprint },
+                   method: "get",
+                   url: this.url,
+               } )
+            .then( (response) => {
+                this.nonce = response.headers[ "pas-nonce" ];
+                this.pascheck = response.headers[ "pas-check" ];
+            } )
+            .catch( (error) => {
+            } );
+    }
 
     protected mounted() {
-        new Fingerprint2().get( (result, components) => {
+        new Fingerprint2().get( (result) => {
             this.fingerprint = result;
-            this.fingerprintComponents = components;
-          });
-
-        axios.get(this.url)
-             .then( (response) => {
-                 console.log(response);
-             })
-             .catch( (error) => {
-                 console.log(error);
-             });
+            this.getInitialHeaders(result);
+        });
 
         this.captcha.then( (captcha) => captcha.render("recaptcha", {
             callback: this.validate_captcha,
             sitekey: this.rcaptSigKey,
-
         }));
     }
 
@@ -67,38 +74,35 @@ export default class ContactForm extends Vue {
     protected validateBeforeSubmit() {
         this.$validator.validateAll().then((result) => {
             if (result) {
-                console.log("form validated");
                 this.hideLoader = false;
                 this.hideForm = !this.hideLoader;
-                axios.post(this.url, {
-                    captcha: this.captchaResponse,
-                    email: this.email,
-                    fingerprint: this.fingerprint,
-                    fullname: this.fullname,
-                    message: this.message,
-                    telephone: this.telephone,
-                           })
+                axios(
+                    {
+                        data: {
+                            captcha: this.captchaResponse,
+                            email: this.email,
+                            fingerprint: this.fingerprint,
+                            fullname: this.fullname,
+                            message: this.message,
+                            telephone: this.telephone,
+                           },
+                        headers: {
+                            "PAS-Check": this.pascheck,
+                            "PAS-Fingerprint": this.fingerprint,
+                            "PAS-Nonce": this.nonce,
+                            },
+                        method: "post",
+                        url: this.url,
+                    })
                      .then( (response) => {
                          this.hideLoader = true;
                          this.hideMessage = !this.hideLoader;
                          this.resultMessage = response.data;
-                         console.log(response);
                 })
                     .catch( (response) => {
                         this.hideLoader = true;
                         this.hideMessage = !this.hideLoader;
-                        console.log(response);
                     });
-
-                // setTimeout(() => {
-                //     console.log("hello timer");
-                //     this.hideLoader = true;
-                //     this.hideMessage = !this.hideLoader;
-                // }, 1000);
-                // submit form data to wordpress
-                // validate data and return result
-                // return the result.
-
                 return;
             }
             console.log("errors in form");
