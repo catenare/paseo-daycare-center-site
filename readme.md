@@ -21,7 +21,8 @@
     * `git merge dev`
 1. Update urls to production site
 1. Build production site
-    * change vue alias in webpack config to *vue/dist/vue.min.js*
+    * Change vue alias in webpack config to *vue/dist/vue.min.js*
+    * Change url of backend api service.
     * `npm build` - build production site
 1. Upload to amazon s3
     * Sync via Transmit

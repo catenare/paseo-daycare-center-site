@@ -13,8 +13,8 @@ let WebFont = require('webfontloader')
 
 window.$ = $
 
-const siteUrl = 'http://paseo.demo/wp-json/paseo/v1/contact-us'
-// const siteUrl = 'https://api.paseo.org.za/center/wp-json/paseo/v1/contact-us'
+// const siteUrl = 'http://paseo.demo/wp-json/paseo/v1/contact-us'
+const siteUrl = 'https://api.paseo.org.za/center/wp-json/paseo/v1/contact-us'
 const validateConfig = {
   classes: true
 }
