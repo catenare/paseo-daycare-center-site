@@ -21,10 +21,11 @@
     * `git merge dev`
 1. Update urls to production site
 1. Build production site
+    * change vue alias in webpack config to *vue/dist/vue.min.js*
     * `npm build` - build production site
 1. Upload to amazon s3
     * Sync via Transmit
     * Bucket: paseo-daycare-center
-    
+   
 
 
