@@ -3,12 +3,12 @@ import Validator from "vee-validate";
 import Vue from "vue";
 import Component from "vue-class-component";
 import {mask} from "vue-the-mask";
-import {TheMask} from "vue-the-mask";
+// import {TheMask} from "vue-the-mask";
 import getFinger from "../../../ts/fingerprint";
 
 @Component(
     {
-        components: {TheMask},
+        // components: {TheMask},
         directives: {mask},
         props:
         {
@@ -81,6 +81,7 @@ export default class ContactForm extends Vue {
 
         getFinger.then( (result) => this.getInitHeaders(result) );
 
+        /* for testing */
         // show final screen for final
         // this.resultMessage = false;
         // this.hideForm = true;
@@ -148,14 +149,17 @@ export default class ContactForm extends Vue {
         });
     }
 
+    /* Reset validator */
+    protected clearErrors() {
+        this.$validator.reset();
+    }
+
     /* show form after message is dismissed */
     protected showForm() {
+        this.fullname = this.email = this.telephone = this.message = "";
         this.hideMessage = true;
         this.isSubmitDisabled = true;
-        this.fullname = null;
-        this.email = null;
-        this.telephone = null;
-        this.message = null;
+        this.clearErrors();
         this.localCaptcha.reset();
         this.hideForm = false;
     }
