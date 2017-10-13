@@ -1,11 +1,27 @@
-# Foundation Starter template for Catenare
+# Paseo Daycare and Preschool Site
+* Using VueJs for components
+* Foundation for sites as the css framework
 
-## Changes
-* Added FontAwesome to build and watch script.
-* Changed server port
+## Libraries
+* Vue - [Vuejs](https://vuejs.org/)
+* fingerprint2 - used for browser fingerprinting - [Fingerprint2js](https://github.com/Valve/fingerprintjs2)
+* TypeScript - vue components - [Vue Class Component](https://github.com/vuejs/vue-class-component)
+* Form validator - vee-validate - [Vee-Validate](http://vee-validate.logaretm.com/)
+* Vue The Mask - [Vue The Mask](https://github.com/vuejs-tips/vue-the-mask)
+* Cookie Law - [Vue Cookie Law](https://apertureless.github.io/vue-cookie-law/)
+* Vue2Filters - [Vue2Filters](https://github.com/freearhey/vue2-filters) - Vuejs 1 filters for Vuejs 2
+* Webfontloader- [Webfontloader](https://github.com/typekit/webfontloader)
 
-This is a basic starter template for building a static page. For changes, see [Foundation for Sites Notes](http://www.johan-martin.com/devnotes/web/foundation)
+## Other
+* Google Captcha - [Docs](https://developers.google.com/recaptcha/intro)
 
-## Tasks
-* Validate form
-* Make sure form is valid before setting
+## Deploying static site
+1. Make sure current production version has been tagged.
+1. Merge development branch into master.
+    * `git merge dev`
+1. Update urls to production site
+1. Build production site
+    * ``
+
+
+
