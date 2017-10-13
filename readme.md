@@ -21,7 +21,10 @@
     * `git merge dev`
 1. Update urls to production site
 1. Build production site
-    * ``
-
+    * `npm build` - build production site
+1. Upload to amazon s3
+    * Sync via Transmit
+    * Bucket: paseo-daycare-center
+    
 
 
