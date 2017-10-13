@@ -45,7 +45,7 @@ $contact-us-section-bg: $body-background;
   input[type=text],
   input[type=email],
   textarea {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
   }
 }
 
@@ -65,37 +65,3 @@ $contact-us-section-bg: $body-background;
     color: $dark-gray;
   }
 }
-
-//.contact-us-list {
-//  list-style-type: none;
-//  margin: 0;
-//
-//  li {
-//    a {
-//      color: $black;
-//    }
-//  }
-//
-//  li::before {
-//    margin-right: 2rem;
-//    font-size: 2rem;
-//    vertical-align: middle;
-//    color: $dark-gray;
-//    font-family: 'FontAwesome';
-//  }
-//
-//  // generates icons - change fontawesome content codes below to change icons
-//  .address::before {
-//    content: '\f041';
-//    margin-left: 0.4rem;
-//    margin-right: 2.3rem;
-//  }
-//
-//  .email::before {
-//    content: '\f003';
-//  }
-//
-//  .phone::before {
-//    content: '\f098';
-//  }
-//}

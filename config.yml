@@ -22,7 +22,7 @@ PATHS:
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
     - "src/assets/**/*"
-    - "!src/assets/{img,js,scss,fonts}/**/*"
+    - "!src/assets/{vue,img,js,scss,fonts,ts}/**/*"
   # Path to fonts
   fonts:
     - "src/assets/fonts/*"
