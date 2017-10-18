@@ -13,4 +13,10 @@ footer.site-footer {
   a:hover {
     color: $grayish;
   }
+  .byline{
+    font-weight: 700;
+    a {
+      color: $white;
+    }
+}
 }
