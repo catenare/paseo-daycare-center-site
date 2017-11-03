@@ -10,7 +10,7 @@ module.exports = {
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/assets'),
     publicPath: '/assets/',
     filename: '[name].js'
   },
