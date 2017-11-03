@@ -10,7 +10,8 @@ module.exports = {
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
-    path: path.resolve(__dirname, './dist/assets'),
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/assets/',
     filename: '[name].js'
   },
   resolve: {
@@ -98,11 +99,11 @@ module.exports = {
   devtool: 'eval-source-map',
   devServer: {
     compress: true,
-    hot: true,
+    hot: false,
     historyApiFallback: true,
     watchContentBase: true,
     open: false,
-    contentBase: path.join(__dirname, './dist')
+    contentBase: 'dist/'
   }
 }
 
