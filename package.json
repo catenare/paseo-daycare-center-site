@@ -4,13 +4,14 @@
   "description": "Paseo Daycare and Preschool based on Zurb Foundation",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "npm-run-all --parallel dev:server lint:watch gulp",
+    "start": "npm-run-all --parallel dev:server lint:watch gulp:watch",
     "dev:watch": "webpack -w -d",
     "dev:server": "cross-env NODE_ENV=development webpack-dev-server --color --progress",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "build": "npm-run-all --parallel build:webpack build:gulp",
+    "build:webpack": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "lint": "esw webpack.config.* src --color",
     "lint:watch": "npm run lint -- --watch",
-    "gulp": "gulp",
+    "gulp:watch": "gulp",
     "build:gulp": "gulp build --production",
     "gh-deploy": "gh-pages -d dist"
   },

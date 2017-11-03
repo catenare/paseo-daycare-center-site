@@ -6,12 +6,12 @@ const vendorPackages = require('./package.json')
 
 module.exports = {
   entry: {
-    entry: './src/assets/js/app.js',
+    app: './src/assets/js/app.js',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js'
+    path: path.resolve(__dirname, './dist/assets'),
+    filename: '[name].js'
   },
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
@@ -20,14 +20,10 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebPackPlugin(['./assets']),
+    new CleanWebPackPlugin(['./dist/assets']),
     new ExtractTextPlugin({
       filename: 'style.css',
       allChunks: true
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'shared',
-      minChunks: 2
     })
   ],
   module: {

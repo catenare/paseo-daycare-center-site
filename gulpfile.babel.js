@@ -1,20 +1,20 @@
 'use strict'
 
-import plugins from 'gulp-load-plugins'
-import yargs from 'yargs'
+// import plugins from 'gulp-load-plugins'
+// import yargs from 'yargs'
 import gulp from 'gulp'
 import panini from 'panini'
 import yaml from 'js-yaml'
 import fs from 'fs'
 
 // Load all Gulp plugins into one variable
-const $ = plugins()
+// const $ = plugins()
 
 // Check for --production flag
-const PRODUCTION = !!(yargs.argv.production)
+// const PRODUCTION = !!(yargs.argv.production)
 
 // Load settings from settings.yml
-const {COMPATIBILITY, PORT, UNCSS_OPTIONS, PATHS} = loadConfig()
+const {PATHS} = loadConfig()
 
 function loadConfig () {
   let ymlFile = fs.readFileSync('config.yml', 'utf8')
@@ -28,9 +28,6 @@ gulp.task('build',
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', watch))
-
-
-
 
 // Copy page templates into finished HTML files
 function pages () {
@@ -50,16 +47,6 @@ function resetPages (done) {
   panini.refresh()
   done()
 }
-
-
-
-
-
-
-
-
-
-
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch () {
