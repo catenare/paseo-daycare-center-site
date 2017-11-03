@@ -6,9 +6,9 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paseo Daycare and Preschool</title>
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="{{root}}style.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105177571-2"></script>
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105177571-2"></script>-->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -25,7 +25,9 @@
       {{>body}}
       {{>daycare-footer}}
   </div>
-    <script src="{{root}}assets/js/app.js"></script>
+    <script src="{{root}}entry.bundle.js"></script>
+  <script src="{{root}}shared.bundle.js"></script>
+  <script src="{{root}}vendor.bundle.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=initCaptcha&render=explicit' async defer></script>
   </body>
 </html>

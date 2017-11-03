@@ -4,8 +4,9 @@
 @import 'settings';
 @import 'custom';
 
-@import 'foundation';
-@import 'motion-ui';
+@import '~font-awesome/scss/font-awesome.scss';
+@import '~foundation-sites/scss/foundation';
+//@import '~motion-ui';
 
 @include foundation-global-styles;
 // @include foundation-grid;
@@ -52,8 +53,8 @@
 
 // @include foundation-prototype-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 
 @import 'components/building-blocks/marketing-site-footer';

@@ -5,16 +5,16 @@ import Vue from 'vue'
 import Vue2Filters from 'vue2-filters'
 import VeeValidate from 'vee-validate'
 import ContactForm from '../vue/components/ContactForm'
-import whatInput from 'what-input'
-
+import whatInput from 'what-input' // eslint-disable-line
+import '../scss/app.scss'
 import './lib/foundation-explicit-pieces'
 
 let WebFont = require('webfontloader')
 
 window.$ = $
 
-const siteUrl = 'http://paseo.demo/wp-json/paseo/v1/contact-us'
-// const siteUrl = 'https://api.paseo.org.za/center/wp-json/paseo/v1/contact-us'
+// const siteUrl = 'http://paseo.demo/wp-json/paseo/v1/contact-us'
+const siteUrl = 'https://api.paseo.org.za/center/wp-json/paseo/v1/contact-us'
 const validateConfig = {
   classes: true
 }
@@ -46,7 +46,7 @@ $(document).ready(function () {
       props: {
         theme: 'royal',
         position: 'top',
-        transitionName: 'slideFromTop',
+        transitionName: 'slideFromTop'
       }
     })
   })
