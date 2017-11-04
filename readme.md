@@ -22,11 +22,34 @@
 1. Update urls to production site
 1. Build production site
     * Change vue alias in webpack config to *vue/dist/vue.min.js*
-    * Change url of backend api service.
+    * Change url of backend api service. - point to live api site
     * `npm build` - build production site
-1. Upload to amazon s3
-    * Sync via Transmit
-    * Bucket: paseo-daycare-center
+1. ~~Upload to amazon s3~~
+    * ~~Sync via Transmit~~
+    * ~~Bucket: paseo-daycare-center~~
+### Hosting static files on firebase
+* Moved hosting static files from Amazon Cloudfront to Google Firebase
+  * Google has CDN endpoints in South Africa
+  * Free 1gb of hosting provided
+  * Free traffic provided
+  * Command line tool to deploy site to firebase hosting
+    * `firebase deploy`
+1. Build static site - see above
+1. Test static site - `firebase serve` - site on localhost:5000
+1. Deploy site - `firebase deploy`
+### Tag current master
+1.  After deploying site
+  * `git tag -a v0.0.0 -m 'tag for current release'`
+  * `git tag` - list tags
+  * `git push --tags` - push to repo
+## Convert from foundation-cli to webpack/gulp site
+1. Not ready to dig into creating a loader with panini
+  * Using gulp to watch panini/html/hbs files
+    * Edit gulp file to only watch and build the panini files
+  * Using webpack to watch and process all other files.
+  * Gets me the benefits of panini but using webpack for processing scss, typescript and  javascript files.
+1. `npm-run-all` - run multiple npm scripts - [npm-run-all](https://github.com/mysticatea/npm-run-all)
+
    
 
 

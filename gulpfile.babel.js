@@ -4,6 +4,7 @@
 // import yargs from 'yargs'
 import gulp from 'gulp'
 import panini from 'panini'
+import rimraf from 'rimraf'
 import yaml from 'js-yaml'
 import fs from 'fs'
 
@@ -23,11 +24,23 @@ function loadConfig () {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(pages))
+  gulp.series(clean, pages))
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', watch))
+
+gulp.task('clean',
+  gulp.series(clean))
+
+gulp.task('watch',
+  gulp.series(watch))
+
+// Delete the "dist" folder
+// This happens every time a build starts
+function clean (done) {
+  rimraf(PATHS.dist, done)
+}
 
 // Copy page templates into finished HTML files
 function pages () {
