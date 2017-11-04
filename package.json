@@ -2,7 +2,7 @@
   "name": "paseo-daycare-center",
   "version": "1.0.0",
   "description": "Paseo Daycare and Preschool based on Zurb Foundation",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm-run-all -n -s clean -p gulp:watch dev:server lint:watch",
     "dev:watch": "webpack -w -d",
