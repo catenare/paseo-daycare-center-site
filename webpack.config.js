@@ -21,8 +21,13 @@ module.exports = {
     }
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      async: true,
+      minChunks: Infinity
+    }),
     new ExtractTextPlugin({
-      filename: 'style.css',
+      filename: '[name].css',
       allChunks: true
     })
   ],
