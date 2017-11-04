@@ -7,6 +7,7 @@ const vendorPackages = require('./package.json')
 module.exports = {
   entry: {
     app: './src/assets/js/app.js',
+    registration: './src/assets/ts/registration.ts',
     vendor: Object.keys(vendorPackages.dependencies).filter(name => (name !== 'font-awesome' && name !== 'csspin'))
   },
   output: {

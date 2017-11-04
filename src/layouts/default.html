@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paseo Daycare and Preschool</title>
-    <link rel="stylesheet" href="{{root}}assets/app.css">
+    <title>{{#if title}} {{title}} | {{/if}} Paseo Daycare Center</title>
+    <link rel="stylesheet" href="{{root}}assets/{{#if css}}{{css}}{{else}}app.css{{/if}}">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105177571-2"></script>-->
 <script>
@@ -20,13 +20,15 @@
   <body>
   {{>daycare-cookielaw}}
   <div class="grid-container fluid">
-      {{>daycare-header}}
+
       {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
       {{>body}}
       {{>daycare-footer}}
   </div>
   <script src="{{root}}assets/vendor.js"></script>
-    <script src="{{root}}assets/app.js"></script>
+  <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
+  {{#ifpage 'index'}}
     <script src='https://www.google.com/recaptcha/api.js?onload=initCaptcha&render=explicit' async defer></script>
+  {{/ifpage}}
   </body>
 </html>
