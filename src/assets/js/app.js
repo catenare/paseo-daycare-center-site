@@ -15,8 +15,6 @@ window.$ = $
 
 const siteUrl = __API__ // eslint-disable-line
 
-// const siteUrl = 'http://paseo.demo/wp-json/paseo/v1/contact-us'
-// const siteUrl = 'https://api.paseo.org.za/center/wp-json/paseo/v1/contact-us'
 const validateConfig = {
   classes: true
 }
