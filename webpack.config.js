@@ -4,6 +4,21 @@ const CleanWebPackPlugin = require('clean-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
 
+let apiHost
+
+const setupAPI = function () {
+  switch (process.env.NODE_ENV) {
+    case 'production':
+      apiHost = '"https://api.paseo.org.za/center/wp-json/paseo/v1/contact-us"'
+      break
+    default:
+      apiHost = '"http://paseo.demo/wp-json/paseo/v1/contact-us"'
+      break
+  }
+}
+
+setupAPI()
+
 module.exports = {
   entry: {
     app: './src/assets/js/app.js',
@@ -30,6 +45,9 @@ module.exports = {
     new ExtractTextPlugin({
       filename: '[name].css',
       allChunks: true
+    }),
+    new webpack.DefinePlugin({
+      __API__: apiHost
     })
   ],
   module: {
