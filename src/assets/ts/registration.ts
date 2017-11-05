@@ -29,4 +29,17 @@ $(document).ready( () => {
   Vue.use(Vue2Filters);
   Vue.use(VeeValidate, validateConfig);
 
+  const v = new Vue(
+    {
+    data: {
+        message: "This is a test",
+      },
+    el: "#registration-form",
+    template:
+    `<div>
+      <div>Hello {{message}}</div>
+      Name: <input v-model="name" type="text">
+    </div>`,
+    });  // eslint-disable-line
+
 });

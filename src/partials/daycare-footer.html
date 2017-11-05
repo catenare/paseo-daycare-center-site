@@ -56,7 +56,12 @@
       </div>
       <div class="column">
         <ul class="menu marketing-site-footer-bottom-links" data-magellan>
+          {{#ifpage 'index'}}
           {{>daycare-menu-include}}
+          {{/ifpage}}
+          {{#ifpage 'registration'}}
+          {{>registration-menu-include}}
+          {{/ifpage}}
         </ul>
       </div>
     </div>

@@ -24,7 +24,12 @@
             <div class="top-bar" id="main-menu">
                 <div class="top-bar-left">
                     <ul class="vertical large-horizontal menu" data-magellan>
+                      {{#ifpage 'index' }}
                         {{>daycare-menu-include is-head=true}}
+                      {{/ifpage}}
+                      {{#ifpage 'registration'}}
+                        {{>registration-menu-include}}
+                      {{/ifpage}}
                     </ul>
                 </div>
                 <div class="top-bar-right">
