@@ -1,7 +1,7 @@
 'use strict'
 
 // import plugins from 'gulp-load-plugins'
-// import yargs from 'yargs'
+import yargs from 'yargs'
 import gulp from 'gulp'
 import panini from 'panini'
 import rimraf from 'rimraf'
@@ -12,7 +12,7 @@ import fs from 'fs'
 // const $ = plugins()
 
 // Check for --production flag
-// const PRODUCTION = !!(yargs.argv.production)
+const PRODUCTION = !!(yargs.argv.production)
 
 // Load settings from settings.yml
 const {PATHS} = loadConfig()
