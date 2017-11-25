@@ -1,11 +1,14 @@
+import Vue from "vue";
 import VueRouter from "vue-router";
-import Events from "../vue/registration/events/index.vue";
-import Fees from "../vue/registration/fees/index.vue";
-import Other from "../vue/registration/other/index.vue";
-import Programs from "../vue/registration/programs/index.vue";
-import Registration from "../vue/registration/registration/index.vue";
+import Events from "../vue/Components/Registration/events/index.vue";
+import Fees from "../vue/Components/Registration/fees/index.vue";
+import Other from "../vue/Components/Registration/other/index.vue";
+import Programs from "../vue/Components/Registration/programs/index.vue";
+import Registration from "../vue/Components/Registration/registration/index.vue";
 
-const routes = [
+Vue.use(VueRouter);
+
+const routes: any = [
   { path: "/events", component: Events },
   { path: "/programs", component: Programs },
   { path: "/fees", component: Fees },
@@ -13,8 +16,7 @@ const routes = [
   { path: "/registration", component: Registration },
 ];
 
-const Router = new VueRouter({
+const router = new VueRouter({
   routes,
 });
-
-export {Router};
+export {router};
