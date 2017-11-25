@@ -21,12 +21,12 @@
   </head>
   <body>
   {{>daycare-cookielaw}}
-  <div class="grid-container fluid">
+  <main class="grid-container fluid">
 
       {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
       {{>body}}
       {{>daycare-footer}}
-  </div>
+  </main>
   <script src="{{root}}assets/vendor.js"></script>
   <script src="{{root}}assets/{{#if js}}{{js}}{{else}}app.js{{/if}}"></script>
   {{#ifpage 'index'}}

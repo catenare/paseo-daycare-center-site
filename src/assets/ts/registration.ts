@@ -2,7 +2,9 @@ import $ from "jquery";
 import VeeValidate from "vee-validate";
 import Vue from "vue";
 import CookieLaw from "vue-cookie-law";
+import VueRouter from "vue-router";
 import Vue2Filters from "vue2-filters";
+import Router from "./router";
 
 import whatInput from "what-input"; // eslint-disable-line
 import "../js/lib/foundation-explicit-pieces";
@@ -27,6 +29,7 @@ $(document).ready( () => {
   });
 
   Vue.use(Vue2Filters);
+  Vue.use(VueRouter);
   Vue.use(VeeValidate, validateConfig);
 
   const v = new Vue(
