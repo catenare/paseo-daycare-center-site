@@ -1,10 +1,15 @@
 /** About Us */
 #about {
+
   blockquote {
+    display: none;
     font-family: 'Short Stack';
     font-size: 1.25rem;
     margin: 1rem;
     border: 0;
+    @include breakpoint(medium down) {
+      display: block;
+    }
   }
 
   h1, h2 {

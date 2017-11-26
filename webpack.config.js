@@ -127,7 +127,10 @@ module.exports = {
     historyApiFallback: true,
     watchContentBase: true,
     open: false,
-    contentBase: 'dist/'
+    contentBase: 'dist/',
+    watchOptions: {
+      ignored: /node_modules/
+    }
   }
 }
 

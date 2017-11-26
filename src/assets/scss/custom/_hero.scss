@@ -10,40 +10,108 @@
     background-image: url("https://res.cloudinary.com/paseo/image/upload/q_auto:good,h_800/daycare/hero/paseo_daycare_orbit-3.jpg");
   }
 
+  & p {
+    font-weight: bolder;
+    font-size: 2em;
+  }
+
+  & h1 {
+      font-weight: bolder;
+      font-size: 3em;
+  }
+
   &__caption {
     background: rgba(255, 136, 17, .7);;
     position: absolute;
     top: 45%;
     left: 10%;
-    width: 60%;
+    width: 40%;
     padding: 1rem;
     transform: translateY(-50%);
     border-radius: 10px;
     color: smart-scale(rgba(120, 108, 84, 0.8), -50%);
     text-align: center;
-  }
-
-  & h1, & p {
-    font-weight: bolder;
-  }
-
-  & h1 {
-    font-size: 1.25em;
-  }
-
-  @include breakpoint(large) {
-    & h1 {
-      font-weight: bolder;
-      font-size: 3em;
-    }
-
-    &__caption {
-      width: 50%;
-    }
 
     & p {
       font-weight: bolder;
-      font-size: 2em;
+      font-size: 2rem;
+    }
+
+    & h1 {
+      font-weight: bolder;
+      font-size: 3rem;
+    }
+
+    @include breakpoint(medium down) {
+      width: 80%;
+      & h1 {
+        font-size: 2rem;
+      }
+      & p {
+        font-size: 1.25rem;
+      }
     }
   }
+  div.main-hero__blockquote {
+      // font-family: 'Short Stack';
+      // font-size: 1.50em;
+      // margin: 1rem;
+      // border: 0;
+      position: absolute;
+      top: 75%;
+      left: 0;
+      width: 100%;
+      // color: $white;
+      display: none;
+      @include breakpoint(large up) {
+        display: block;
+      }
+    }
+  & div blockquote {
+    font-family: 'Short Stack';
+    font-size: 1.50em;
+    margin: 0.5% auto;
+    width: 95%;
+    padding: 0.1rem;
+    line-height: 1.25;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0 , 0.3);
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin: 1rem;
+    border: 0;
+    // position: absolute;
+    // bottom: 2%;
+    // left: 5%;
+    // width: 85%;
+    color: $white;
+    // display: none;
+    // @include breakpoint(large up) {
+    //   display: block;
+    // }
+  }
+
+  // & h1, & p {
+  //   font-weight: bolder;
+  // }
+
+  // & h1 {
+  //   font-size: 1.25em;
+  // }
+
+  // @include breakpoint(large) {
+  //   & h1 {
+  //     font-weight: bolder;
+  //     font-size: 3em;
+  //   }
+
+  //   // &__caption {
+  //   //   width: 80%;
+  //   // }
+
+  //   & p {
+  //     font-weight: bolder;
+  //     font-size: 2em;
+  //   }
+  // }
 }
