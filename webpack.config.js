@@ -1,7 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
-const CleanWebPackPlugin = require('clean-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const CleanWebPackPlugin = require('clean-webpack-plugin')
+// const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vendorPackages = require('./package.json')
 
 module.exports = {
@@ -21,11 +21,11 @@ module.exports = {
     }
   },
   plugins: [
-    new CleanWebPackPlugin(['./dist/assets']),
-    new ExtractTextPlugin({
-      filename: 'style.css',
-      allChunks: true
-    })
+    // new CleanWebPackPlugin(['./dist/assets']),
+    // new ExtractTextPlugin({
+    //   filename: 'style.css',
+    //   allChunks: true
+    // })
   ],
   module: {
     rules: [
@@ -56,17 +56,17 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            'css-loader',
-            'postcss-loader',
-            'sass-loader'
-          ]
-        })
-      },
+      //   test: /\.scss$/,
+      //   exclude: /node_modules/,
+      //   use: ExtractTextPlugin.extract({
+      //     fallback: 'style-loader',
+      //     use: [
+      //       'css-loader',
+      //       'postcss-loader',
+      //       'sass-loader'
+      //     ]
+      //   })
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules(\/?!foundation-sites)/,
